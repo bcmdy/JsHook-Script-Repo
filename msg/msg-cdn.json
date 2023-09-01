@@ -1,7 +1,7 @@
 [
     {
         "id": "9",
-        "title": "庆祝新版仓库CDN",
+        "title": "更新公告CDN",
         "args": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/msg/msg.markdown",
         "action": "markdown"
     }
