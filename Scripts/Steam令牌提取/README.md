@@ -1,11 +1,12 @@
 # 名称
 Steam令牌提取
 # Version
-1.0
+2.0
 # 脚本类型
 Frida
 # 描述
 Steam令牌提取
+
 提取Steam令牌 原始 SteamGuard-NNNNNNNNN 文件内容
 
 uuidKey依旧从文件:/data/user/0/com.valvesoftware.android.steam.community/shared_prefs/steam.uuid.xml 中明文提取
@@ -13,36 +14,11 @@ uuidKey依旧从文件:/data/user/0/com.valvesoftware.android.steam.community/sh
 用于第三方密钥令牌管理.
 
 如 WinAuth, Steam Desktop Auto, Watt Toolkit(原Steam++)
-# 注:
-获取到结果:
-
-{
-  "accounts": {
-    "XXXXX": {
-      "shared_secret": "XXX",
-      "identity_secret": "XXX",
-      "secret_1": "XXX",
-      "serial_number": "XXX",
-      "revocation_code": "XXX",
-      "account_name": "XXX",
-      "token_gid": "XXX",
-      "phone_number_hint": "XXX"
-    }
-  }
-}
-
-掐头去尾修改为:
-
-{
-  "shared_secret": "XXX",
-  "identity_secret": "XXX",
-  "secret_1": "XXX",
-  "serial_number": "XXX",
-  "revocation_code": "XXX",
-  "account_name": "XXX",
-  "token_gid": "XXX",
-  "phone_number_hint": "XXX"
-}
-
+# 更新:
+V2.0
+2023-9-2 15:28:12
+提高运行效率并添加正则提取，直接打印出:
+{"shared_secret":"xxxxxx","identity_secret":"xxxxxxx","secret_1":"xxxxxx","serial_number":"xxxxxx","revocation_code":"xxxxxx","account_name":"xxxxxx","token_gid":"xxxxxx","steamguard_scheme":x,"steamid":"xxxxxx"}
+令牌信息直接可用，无需手动修改
 # 作者
 @墨殇
