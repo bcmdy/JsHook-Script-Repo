@@ -39,13 +39,13 @@ function main() {
             console.log(`名称: ${name} | Version: ${version} | 脚本类型: ${scriptType} | 作者: ${author} | 描述: ${description}`);
             let filepatn = allFiles[i].substring(0, allFiles[i].length - 'README.md'.length);
             // console.log(filepatn);
-            let mtime = fs.statSync(filepatn + scriptType + ".js").mtime.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
-            // console.log(mtime);
+            let ctime = fs.statSync(filepatn + scriptType + ".js").ctime.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
+            // console.log(ctime);
             let branch = "master"; // master、main 分支名称
             let store = {
                 "author": author,
                 "markdown": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/" + branch + "/Scripts/" + name + "/README.md",
-                "ctime": mtime,
+                "ctime": ctime,
                 "source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/" + branch + "/Scripts/" + name,
                 "id": name,
                 "title": name,
@@ -59,7 +59,7 @@ function main() {
             let store_cdn = {
                 "author": author,
                 "markdown": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@" + branch + "/Scripts/" + name + "/README.md",
-                "ctime": mtime,
+                "ctime": ctime,
                 "source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/" + branch + "/Scripts/" + name,
                 "id": name,
                 "title": name,
