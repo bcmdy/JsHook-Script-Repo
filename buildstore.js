@@ -16,7 +16,7 @@ function main() {
         // console.log(allFiles[i]);
         // 同步读取文件内容
         if (allFiles[i].indexOf("README.md") >= 0 && allFiles[i] != "./README.md") {
-            console.log(allFiles[i]);// 读取文件内容
+            // console.log(allFiles[i]);// 读取文件内容
             let content = fs.readFileSync(allFiles[i], 'utf-8');
             let nameRegex = /^# 名称\s+(.*)$/m; // 匹配以 "#名称" 开头，后面跟着至少一个空格的行，并获取该行后面所有文本。
             let versiongex = /^# Version\s+(.*)$/m;
@@ -36,12 +36,14 @@ function main() {
             let scriptType = scriptTypeMatch && scriptTypeMatch[1]; // 如果找到了匹配项，则获取第一项（分组捕获的内容）。
             let author = authorMatch && authorMatch[1]; // 如果找到了匹配项，则获取第一项（分组捕获的内容）。
             let description = descriptionMatch && descriptionMatch[1]; // 如果找到了匹配项，则获取第一项（分组捕获的内容）。
-            console.log(`名称: ${name} | Version: ${version} | 脚本类型: ${scriptType} | 作者: ${author} | 描述: ${description}`);
             let filepatn = allFiles[i].substring(0, allFiles[i].length - 'README.md'.length);
             // console.log(filepatn);
             let ctime = fs.statSync(filepatn + scriptType + ".js").ctime.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
             // console.log(ctime);
             let branch = "master"; // master、main 分支名称
+
+            console.log(`修改时间: ${ctime} | 名称: ${name} | Version: ${version} | 脚本类型: ${scriptType} | 作者: ${author} | 描述: ${description}`);
+
             let store = {
                 "author": author,
                 "markdown": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/" + branch + "/Scripts/" + name + "/README.md",
