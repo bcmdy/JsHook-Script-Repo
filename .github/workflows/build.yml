@@ -25,14 +25,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: build and update
-          # 运行的命令或者 action
-        run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
-          git add .
-          git commit -m "Action Updates"
-          git push
 
   Updates:
     needs: build
