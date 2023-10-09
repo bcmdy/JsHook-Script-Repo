@@ -84,10 +84,11 @@ function main() {
             stores_cdn.push(store_cdn);
         }
     }
-    fs.writeFileSync('Store.json', JSON.stringify(stores));
-    fs.writeFileSync('Store-cdn.json', JSON.stringify(stores_cdn));
+    // fs.writeFileSync('Store.json', JSON.stringify(stores));
+    // fs.writeFileSync('Store-cdn.json', JSON.stringify(stores_cdn));
+    fs.writeFileSync('Store.json', JSON.stringify(stores, null, "\t"));
+    fs.writeFileSync('Store-cdn.json', JSON.stringify(stores_cdn, null, "\t"));
     //console.log(stores);
-
 }
 
 /**
