@@ -25,16 +25,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-
-  Updates:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
       - name: Build Store.json&Store-cdn.json
         run: node ./buildstore.js
       - name: git push
@@ -44,3 +34,21 @@ jobs:
           git add .
           git commit -m "Action Updates"
           git push
+  # Updates:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 16
+  #         registry-url: https://registry.npmjs.org/
+  #     - name: Build Store.json&Store-cdn.json
+  #       run: node ./buildstore.js
+  #     - name: git push
+  #       run: |
+  #         git config --global user.name "GitHub Action"
+  #         git config --global user.email "action@github.com"
+  #         git add .
+  #         git commit -m "Action Updates"
+  #         git push
