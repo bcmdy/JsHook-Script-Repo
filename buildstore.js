@@ -24,12 +24,14 @@ function main() {
             let authorRegex = /^# 作者\s+@(.*)$/m; // 匹配以 "#作者" 开头，后面跟着至少一个空格和 "@" 符号的行，并获取该行后面所有文本。
             // let descriptionRegex = /# 描述\s+([\s\S]*?)\s+# /; // 匹配以 "#描述" 开头，后面跟着至少一个空格的行，并获取该行后面所有文本。
             let descriptionRegex = /# 描述\s+([\s\S]*?)$/m; // 匹配以 "#描述" 开头，后面跟着至少一个空格的行，并获取该行后面所有文本。
+            let ctimeRegex = /^# 更新时间\s+(.*)$/m
 
             let nameMatch = content.match(nameRegex); // 使用正则表达式从文本中获取名称。
             let versionMatch = content.match(versiongex);
             let scriptTypeMatch = content.match(scriptTypeRegex); // 使用正则表达式从文本中获取脚本类型。
             let authorMatch = content.match(authorRegex); // 使用正则表达式从文本中获取作者。
             let descriptionMatch = content.match(descriptionRegex); // 使用正则表达式从文本中获取描述。
+            let ctimeMatch = content.match(ctimeRegex);
 
             let name = nameMatch && nameMatch[1]; // 如果找到了匹配项，则获取第一项（分组捕获的内容）。
             let version = versionMatch && versionMatch[1]; // 如果找到了匹配项，则获取第一项（分组捕获的内容）。
@@ -38,8 +40,16 @@ function main() {
             let description = descriptionMatch && descriptionMatch[1]; // 如果找到了匹配项，则获取第一项（分组捕获的内容）。
             let filepatn = allFiles[i].substring(0, allFiles[i].length - 'README.md'.length);
             // console.log(filepatn);
-            let ctime = fs.statSync(filepatn + scriptType + ".js").ctime.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
+            // console.log(allFiles[i]);
+            // let ctime = fs.statSync(filepatn + scriptType + ".js").ctime.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
+            let ctime = ctimeMatch && ctimeMatch[1];
             // console.log(ctime);
+            if (ctime == null) {
+                ctime = fs.statSync(filepatn + scriptType + ".js").ctime.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
+                fs.writeFileSync(allFiles[i], content + "\r\n# 更新时间\r\n" + ctime);
+                console.log(allFiles[i] + "未找到更新时间,自动识别为最后修改时间");
+            }
+
             let branch = "master"; // master、main 分支名称
 
             console.log(`修改时间: ${ctime} | 名称: ${name} | Version: ${version} | 脚本类型: ${scriptType} | 作者: ${author} | 描述: ${description}`);

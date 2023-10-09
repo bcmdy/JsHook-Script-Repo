@@ -17,8 +17,8 @@ setImmediate(e.start);
 
 function e() {
   Il2Cpp.perform((() => {
-    console.log("Unity Version: " + Il2Cpp.unityVersion), console.log("dump Start"), 
-    Il2Cpp.dump("dump.cs", "data/user/0/" + runtime.packageName), console.log("Dump End");
+    console.log("Unity Version: " + Il2Cpp.unityVersion), console.log("Dump Start"), 
+    Il2Cpp.dump("Dump.cs", "data/user/0/" + runtime.packageName), console.log("Dump End");
   }));
 }
 
