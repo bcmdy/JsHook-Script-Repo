@@ -8,28 +8,45 @@ on:
   #   branches: [ "main" ]
 permissions:
   contents: write
+# 一个workflow由执行的一项或多项job
 jobs:
+  # 一个job任务，任务名为build
   build:
+    # runs-on 指定job任务运行所需要的虚拟机环境(必填字段)
+    runs-on: ubuntu-latest
+    # steps是每个Job的运行步骤，可以包含一个或多个步骤
+    steps:
+      # action命令，切换分支获取源码
+      - name: Checkout
+      # 使用action库  actions/checkout获取源码
+        uses: actions/checkout@v3
+      - name: use Node.js 10
+         # 使用action库  actions/setup-node安装node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: build and update
+          # 运行的命令或者 action
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add .
+          git commit -m "Action Updates"
+          git push
+
+  # Updates:
+  #   needs: build
   #   runs-on: ubuntu-latest
   #   steps:
   #     - uses: actions/checkout@v3
   #     - uses: actions/setup-node@v3
   #       with:
   #         node-version: 16
-
-  # publish-npm:
-    # needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
-      - run: node ./buildstore.js
-      - run: |          
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
-          git add .
-          git commit -m "Action Updates"
-          git push
+  #         registry-url: https://registry.npmjs.org/
+  #     - run: node ./buildstore.js
+  #     - run: |
+  #         git config --global user.name "GitHub Action"
+  #         git config --global user.email "action@github.com"
+  #         git add .
+  #         git commit -m "Action Updates"
+  #         git push
