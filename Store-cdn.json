@@ -11,7 +11,7 @@
 		"url": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/FRIDA-DEXDump/Frida.js",
 		"desc": "Dex脱壳脚本1",
 		"down_count": 999
-	},
+	}, 
 	{
 		"author": "JSHook",
 		"markdown": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/Frida通杀java层算法/README.md",
