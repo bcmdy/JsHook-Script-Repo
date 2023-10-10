@@ -39,6 +39,19 @@
 		"down_count": 999
 	},
 	{
+		"author": "墨殇收集整理",
+		"markdown": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/SmileSoft-全屏翻译/README.md",
+		"ctime": "2023/10/10 10:02:17",
+		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/SmileSoft-全屏翻译",
+		"id": "SmileSoft-全屏翻译",
+		"title": "SmileSoft-全屏翻译",
+		"type": "Rhino",
+		"version": "1.2.38",
+		"url": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/SmileSoft-全屏翻译/Rhino.js",
+		"desc": "Rhino框架,启动配置建议延时10-20ms,随机请求ID,无限10次试用.具体作者不详,@墨殇搜集整理,不保证可用.",
+		"down_count": 999
+	},
+	{
 		"author": "墨殇",
 		"markdown": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/Steam令牌提取/README.md",
 		"ctime": "2023/9/2 15:33:31",
@@ -75,6 +88,32 @@
 		"version": "1.0",
 		"url": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/dump_dex/Frida.js",
 		"desc": "Dex脱壳脚本2",
+		"down_count": 999
+	},
+	{
+		"author": "墨殇收集整理",
+		"markdown": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/快连随机id/README.md",
+		"ctime": "2023/10/10 10:02:17",
+		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/快连随机id",
+		"id": "快连随机id",
+		"title": "快连随机id",
+		"type": "Rhino",
+		"version": "1.0",
+		"url": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/快连随机id/Rhino.js",
+		"desc": "快连随机id,切换线路,铂金会员.具体作者不详,@墨殇搜集整理,不保证可用.",
+		"down_count": 999
+	},
+	{
+		"author": "墨殇收集整理",
+		"markdown": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/番茄免费小说/README.md",
+		"ctime": "2023/10/10 10:02:17",
+		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/番茄免费小说",
+		"id": "番茄免费小说",
+		"title": "番茄免费小说",
+		"type": "Rhino",
+		"version": "2.0",
+		"url": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/番茄免费小说/Rhino.js",
+		"desc": "番茄免费小说vip破解,可能需要登陆.具体作者不详,@墨殇搜集整理,不保证可用.",
 		"down_count": 999
 	},
 	{
