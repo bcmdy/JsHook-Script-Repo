@@ -1,6 +1,5 @@
 {
     "scripts": {
-        "Ai_build": "node buildstore.js",
-        "bak_build": "node buildstore_bak.js"
+        "buildstore": "node buildstore.js"
     }
 }
