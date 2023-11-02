@@ -1,18 +1,5 @@
 [
 	{
-		"author": "lasting-yang",
-		"markdown": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/dump_dex/README.md",
-		"ctime": "2023/6/2 18:17:28",
-		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/dump_dex",
-		"id": "dump_dex",
-		"title": "dump_dex",
-		"type": "Frida",
-		"version": "1.0",
-		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/dump_dex/Frida.js",
-		"desc": "Dex脱壳脚本2",
-		"down_count": 999
-	},
-	{
 		"author": "hluwa",
 		"markdown": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/FRIDA-DEXDump/README.md",
 		"ctime": "2023/6/2 18:17:28",
@@ -88,6 +75,19 @@
 		"version": "1.1",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/Unity Dump/Frida.js",
 		"desc": "Unity Dump 内存dump 获得基于Unity3d的游戏相关代码",
+		"down_count": 999
+	},
+	{
+		"author": "lasting-yang",
+		"markdown": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/dump_dex/README.md",
+		"ctime": "2023/6/2 18:17:28",
+		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/dump_dex",
+		"id": "dump_dex",
+		"title": "dump_dex",
+		"type": "Frida",
+		"version": "1.0",
+		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/dump_dex/Frida.js",
+		"desc": "Dex脱壳脚本2",
 		"down_count": 999
 	},
 	{
