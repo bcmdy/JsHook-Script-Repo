@@ -118,6 +118,19 @@
 	},
 	{
 		"author": "墨殇",
+		"markdown": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/见习猎魔团/README.md",
+		"ctime": "2023/11/03 15:25:01",
+		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/见习猎魔团",
+		"id": "见习猎魔团",
+		"title": "见习猎魔团",
+		"type": "Frida",
+		"version": "1.2",
+		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/见习猎魔团/Frida.js",
+		"desc": "无敌秒杀",
+		"down_count": 999
+	},
+	{
+		"author": "墨殇",
 		"markdown": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/音量键开关菜单/README.md",
 		"ctime": "2023/6/5 16:30:12",
 		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/音量键开关菜单",
