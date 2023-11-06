@@ -106,12 +106,12 @@
 	{
 		"author": "墨殇修改",
 		"markdown": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/番茄免费小说/README.md",
-		"ctime": "2023/11/06 10:58:53",
+		"ctime": "2023/11/06 11:14:22",
 		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/番茄免费小说",
 		"id": "番茄免费小说",
 		"title": "番茄免费小说",
 		"type": "Rhino",
-		"version": "3.0",
+		"version": "3.1",
 		"url": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/番茄免费小说/Rhino.js",
 		"desc": "这是一个Rhino&Frida脚本, 自动适配HOOK框架。HOOK番茄免费小说(com.dragon.read)Vip破解。最新测试支持v5.9.9.32",
 		"down_count": 999
