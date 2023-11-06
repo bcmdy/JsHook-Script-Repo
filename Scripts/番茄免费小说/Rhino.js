@@ -78,9 +78,9 @@ function Frida_hookMethods() {
 */
 function Main() {
   // 检查当前包名是否为 com.dragon.read
-  if (runtime.packageName === 'com.dragon.read') {
+  if (runtime.packageName == 'com.dragon.read') {
     // 获取当前注入的类型(1:rhino 2:frida)
-    const coreType = runtime.coreType();
+    const coreType = runtime.coreType;
 
     // 根据注入类型调用不同的方法
     if (coreType == 1) {
