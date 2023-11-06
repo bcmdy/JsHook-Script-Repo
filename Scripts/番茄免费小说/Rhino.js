@@ -5,56 +5,16 @@
 
 // 需要钩子的方法
 const methodsToHook = [
-  {
-      className: 'com.dragon.read.user.b',
-      methodName: 'd',
-      resultValues: 'true'
-  },
-  {
-      className: 'com.dragon.read.component.biz.impl.h.e',
-      methodName: 'isVip',
-      resultValues: 'true'
-  },
-  {
-      className: 'com.dragon.read.polaris.d',
-      methodName: 'e',
-      resultValues: 'false'
-  },
-  {
-      className: 'com.dragon.read.component.audio.impl.ui.c.a',
-      methodName: 'a',
-      resultValues: 'null'
-  },
-  {
-      className: 'com.dragon.read.base.ad.a',
-      methodName: 'a',
-      resultValues: 'false'
-  },
-  {
-      className: 'com.ss.android.update.ad',
-      methodName: 'k',
-      resultValues: 'false'
-  },
-  {
-      className: 'com.dragon.read.social.e.a.d',
-      methodName: '*',
-      resultValues: '*'
-  },
-  {
-      className: 'com.dragon.read.widget.m',
-      methodName: 'a',
-      resultValues: '*'
-  },
-  {
-      className: 'com.dragon.read.reader.ad.readflow',
-      methodName: '*',
-      resultValues: '*'
-  },
-  {
-      className: 'com.dragon.read.polaris.userimport.f',
-      methodName: 'b',
-      resultValues: 'true'
-  }
+  { className: 'com.dragon.read.user.b', methodName: 'd', resultValues: 'true' },
+  { className: 'com.dragon.read.component.biz.impl.h.e', methodName: 'isVip', resultValues: 'true' },
+  { className: 'com.dragon.read.polaris.d', methodName: 'e', resultValues: 'false' },
+  { className: 'com.dragon.read.component.audio.impl.ui.c.a', methodName: 'a', resultValues: 'null' },
+  { className: 'com.dragon.read.base.ad.a', methodName: 'a', resultValues: 'false' },
+  { className: 'com.ss.android.update.ad', methodName: 'k', resultValues: 'false' },
+  { className: 'com.dragon.read.social.e.a.d', methodName: '*', resultValues: '*' },
+  { className: 'com.dragon.read.widget.m', methodName: 'a', resultValues: '*' },
+  { className: 'com.dragon.read.reader.ad.readflow', methodName: '*', resultValues: '*' },
+  { className: 'com.dragon.read.polaris.userimport.f', methodName: 'b', resultValues: 'true' }
 ];
 
 /**
@@ -64,14 +24,14 @@ const methodsToHook = [
 */
 function getResultValue(value) {
   switch (value) {
-      case 'true':
-          return true;
-      case 'false':
-          return false;
-      case 'null':
-          return null;
-      default:
-          return value;
+    case 'true':
+      return true;
+    case 'false':
+      return false;
+    case 'null':
+      return null;
+    default:
+      return value;
   }
 }
 
@@ -80,17 +40,17 @@ function getResultValue(value) {
  */
 function Rhino_hookMethods() {
   methodsToHook.forEach(function (method) {
-      // 找到对应的类并钩子方法
-      const clazz = XposedHelpers.findClass(method.className, runtime.classLoader);
-      const hook = XC_MethodHook({
-          beforeHookedMethod: function (param) {
-              // 设置返回结果值
-              param.setResult(getResultValue(method.resultValues));
-          },
-          afterHookedMethod: function (param) { }
-      });
-      // 钩子方法
-      XposedBridge.hookAllMethods(clazz, method.methodName, hook);
+    // 找到对应的类并钩子方法
+    const clazz = XposedHelpers.findClass(method.className, runtime.classLoader);
+    const hook = XC_MethodHook({
+      beforeHookedMethod: function (param) {
+        // 设置返回结果值
+        param.setResult(getResultValue(method.resultValues));
+      },
+      afterHookedMethod: function (param) { }
+    });
+    // 钩子方法
+    XposedBridge.hookAllMethods(clazz, method.methodName, hook);
   });
 }
 
@@ -100,16 +60,16 @@ function Rhino_hookMethods() {
 function Frida_hookMethods() {
   // 遍历需要钩子的方法
   methodsToHook.forEach(function (method) {
-      // 使用Java.perform()函数执行钩子操作
-      Java.perform(function () {
-          // 获取指定类的方法
-          const targetMethod = Java.use(method.className)[method.methodName];
-          // 重写方法实现
-          targetMethod.overload().implementation = function () {
-              // 返回指定结果值
-              return getResultValue(method.resultValues);
-          }
-      });
+    // 使用Java.perform()函数执行钩子操作
+    Java.perform(function () {
+      // 获取指定类的方法
+      const targetMethod = Java.use(method.className)[method.methodName];
+      // 重写方法实现
+      targetMethod.overload().implementation = function () {
+        // 返回指定结果值
+        return getResultValue(method.resultValues);
+      }
+    });
   });
 }
 
@@ -119,15 +79,15 @@ function Frida_hookMethods() {
 function Main() {
   // 检查当前包名是否为 com.dragon.read
   if (runtime.packageName === 'com.dragon.read') {
-      // 获取当前注入的类型(1:rhino 2:frida)
-      const coreType = runtime.coreType();
-      
-      // 根据注入类型调用不同的方法
-      if (coreType == 1) {
-          Rhino_hookMethods();
-      } else if (coreType == 2) {
-          Frida_hookMethods();
-      }
+    // 获取当前注入的类型(1:rhino 2:frida)
+    const coreType = runtime.coreType();
+
+    // 根据注入类型调用不同的方法
+    if (coreType == 1) {
+      Rhino_hookMethods();
+    } else if (coreType == 2) {
+      Frida_hookMethods();
+    }
   }
 }
 
