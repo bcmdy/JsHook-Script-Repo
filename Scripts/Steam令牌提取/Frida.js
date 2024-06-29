@@ -1,1 +1,30 @@
-U2FsdGVkX189rNdntOaTIWVSlfRpauV6IVitUkAxOXTnq5as4MHPKFnYMB4quQzMiqrDM/GhSNf/Gy9Xal01snjNm53ZtGvOG+iXHnj+BQVnAtnW/C533AlsW2niM+Q0SrHjNWzm+5uOln5EnCLN7U2XWV6bot+0cfCyGeaxW7yiFApJUIhTNzIfPlnTVt+ZnXN89/kppEpoAZt2ODhbQnm7ctWXgRupBTZVwzro4p0Ard4cXex2VMgrXDHpm0VNQXNOdHA1LNwXsTTGGDeO05cHsFyQTVtmagbuRL5rtzRJ8YYVmZe94JwwjpMaARZgPSrZ+PzVRr5JmV5NX35GigNe4dILIfOm+eWFeT61SM4vQ271ZaemGXQxVHeAM/efe0pAr3tBDbAFJtuBHTbqOvt1P/VthZ+ywCNGg4+zquJOqS1h26JYj+RWeYMTTmq37j32LN5DRF83xbFpf416p3OPOMUjrYMegC/kFzPNhhT1FzAjKHGA3+Z179yY8yE11NIJPE89UlJb+RzPHSiMtdn6E6/El3bFJBH2byJDBUWJ2N3G9eabjKqCwyHEypWNcYCSYrBhAwJAUP1QG/SH2xM3XwudakKEBu3kMl2Bszrb1bZj7reVywHyB0D/YePrBXMwiEkI3G5kQwShYz7Vy0AFfPVcUce9SXCcQaHAgHCRBzmjHVSQiAnygRKwh2V+lIuiEQQsm1Y4ysOig2WhedmxNSi4+Sdh4ZMqJOAi/dx7DsAKS4ONRpPLgfjBpg2OrOaQn6H55Gs7Jb8MvMj+pR7ybHbm1Gv4LniiQja4jHCWYsl3uC/ah67Ld/3as/RSi+JWlJoLG7y48He4bBLIsGjDMhLU1C4rfar0R1hYJJCa03uFzMuPMhvGPN7O5zvuiGTo0X8ffwYQeN3CjFnfW7gEsCql0/DhG6epdg9nQsOTbSqsjnATdQuni0ZYpYXw/obsHnK8CXYzJjCfYCOhxGImxQFBYcvFFkH0ZdbVes41SKpHFveBb3AHmr2+qndf/0+YraTbv6IhL/T3jrHtKrv4jEvXD3DWbrh1yFfuFRfZbjwDpD9km9Npi8TEWP5MMVfs36B2HLT6dvfAKANeF1gGLq2yGe/T1bojqH4YW2nShtrHdLMZ1P+yIQFzn57WRsH0FrnD032FhTK6mEowrMGufowPFenNd9jzkSwL+gbPsN3+UVoepw77LwTKJZDKF5Q33oG/pXcQvL562iMWXTRilG4QPonDXUu6j1tTTihtgoRlC0hBEg/wiEHYogMY/dm4VPOd9iC0PDtcmoiFpRrpKf0+CnT0i0mhkY4IELBRDc7yyscEvMpAd/in7+k+k/1YJRSo+4Wh4pH+yIZISeyIe9QuVKx24zgBHT2D6xTXgnq1tkZDrO9OGlgq5JQ9WsD2oam+qHIbIaIyJtrPGjOdwmTG6/gWmH3/+m9AfiSy6C1a79hskkG/IH3hopjoNQHEaeP7PFKAyg==
+var mod = {
+  Name: 'Steam令牌提取',
+  Type: 'Frida',
+  Version: '12.0',
+  Athor: '墨殇(不吃猫的鱼)',
+  Description: `Steam令牌提取
+  提取Steam令牌 原始 SteamGuard-NNNNNNNNN 文件内容
+  用于第三方密钥令牌管理.
+  如 WinAuth, Steam Desktop Auto, Watt Toolkit(原Steam++)
+`
+}
+//expo.modules.securestore.SecureStoreModule$AESEncrypter;->decryptItem(org.json.JSONObject;java.security.KeyStore$SecretKeyEntry;)-->java.lang.String;
+function hook() {
+  var key, id;
+  Java.perform(function () {
+    Java.use("expo.modules.securestore.SecureStoreModule$AESEncrypter").decryptItem.overload('org.json.JSONObject', 'java.security.KeyStore$SecretKeyEntry').implementation = function (arg1, arg2) {
+      let ret = this.decryptItem(arg1, arg2);
+      key = ret
+      return ret;
+    }
+    id = setInterval(() => {
+      if (key) {
+        let pattern = /({"shared_secret":"[\s\S]*?"steamid":"[\s\S]*?"})/;
+        console.log("\r\n" + pattern.exec(key)[1].toString());
+        clearInterval(id);
+      }
+    }, 500);
+  });
+};
+setImmediate(hook);
