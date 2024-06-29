@@ -28,14 +28,14 @@
 	{
 		"author": "墨殇",
 		"markdown": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/GG大玩家Patch/README.md",
-		"ctime": "2023/6/18 20:26:16",
+		"ctime": "2024/6/29 20:26:16",
 		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/GG大玩家Patch",
 		"id": "GG大玩家Patch",
 		"title": "GG大玩家Patch",
 		"type": "Frida",
 		"version": "3.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/GG大玩家Patch/Frida.js",
-		"desc": "GG大玩家破解补丁",
+		"desc": "GG大玩家目前已经跑路, 脚本解密公开，仅供学习交流使用",
 		"down_count": 999
 	},
 	{
