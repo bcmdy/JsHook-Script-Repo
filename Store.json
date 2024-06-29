@@ -54,12 +54,12 @@
 	{
 		"author": "墨殇",
 		"markdown": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/Steam令牌提取/README.md",
-		"ctime": "2023/9/2 15:33:31",
+		"ctime": "2024/6/29 13:26:54",
 		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/Steam令牌提取",
 		"id": "Steam令牌提取",
 		"title": "Steam令牌提取",
 		"type": "Frida",
-		"version": "2.0",
+		"version": "3.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/Steam令牌提取/Frida.js",
 		"desc": "Steam令牌提取",
 		"down_count": 999
