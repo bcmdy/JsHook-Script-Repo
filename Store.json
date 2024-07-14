@@ -91,6 +91,19 @@
 		"down_count": 999
 	},
 	{
+		"author": "墨殇",
+		"markdown": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/mDNF韩服/README.md",
+		"ctime": "2024-7-14 14:11:50",
+		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/mDNF韩服",
+		"id": "mDNF韩服",
+		"title": "mDNF韩服",
+		"type": "Frida",
+		"version": "2.0",
+		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/mDNF韩服/Frida.js",
+		"desc": "过检测仅支持韩服 com.nexon.mdnf v27.3.1",
+		"down_count": 999
+	},
+	{
 		"author": "墨殇收集整理",
 		"markdown": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/快连随机id/README.md",
 		"ctime": "2023/10/10 10:02:17",
