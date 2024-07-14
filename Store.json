@@ -100,7 +100,7 @@
 		"type": "Frida",
 		"version": "2.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/mDNF韩服/Frida.js",
-		"desc": "过检测仅支持韩服 com.nexon.mdnf v27.3.1",
+		"desc": "目前暂无法使用, 等待JsHook正式版更新JsHook ≥ V1.2.5, 框架版本 ≥ V1.2.8_1208",
 		"down_count": 999
 	},
 	{
