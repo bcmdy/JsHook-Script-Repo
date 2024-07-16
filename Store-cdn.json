@@ -157,6 +157,19 @@
 	},
 	{
 		"author": "墨殇",
+		"markdown": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/迷城陆区/README.md",
+		"ctime": "2024/7/16 16:46:49",
+		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/迷城陆区",
+		"id": "迷城陆区",
+		"title": "迷城陆区",
+		"type": "Frida",
+		"version": "1.0.0",
+		"url": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/迷城陆区/Frida.js",
+		"desc": "倍攻、解锁DLC、解锁角色、解锁皮肤、随机UID、阶段解锁(可存档)",
+		"down_count": 999
+	},
+	{
+		"author": "墨殇",
 		"markdown": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/音量键开关菜单/README.md",
 		"ctime": "2023/6/5 16:30:12",
 		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/音量键开关菜单",
