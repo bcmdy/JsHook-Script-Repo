@@ -163,9 +163,9 @@
 		"id": "迷城陆区",
 		"title": "迷城陆区",
 		"type": "Frida",
-		"version": "1.2.0",
+		"version": "1.2.2",
 		"url": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/迷城陆区/Frida.js",
-		"desc": "倍攻(可破坏地形, 不分敌我)、一击必杀(仅对NPC起效)、解锁DLC、解锁角色、解锁皮肤、随机UID、阶段解锁(可存档)",
+		"desc": "倍攻(可破坏地形, 不分敌我)、无敌(可配合倍攻使用)、一击必杀(仅对NPC起效)、解锁DLC、解锁角色、解锁皮肤、随机UID、阶段解锁(可存档)",
 		"down_count": 999
 	},
 	{
