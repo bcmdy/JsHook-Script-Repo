@@ -158,12 +158,12 @@
 	{
 		"author": "墨殇",
 		"markdown": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/迷城陆区/README.md",
-		"ctime": "2024/7/17 11:06:33",
+		"ctime": "2024/7/17 11:20:33",
 		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/迷城陆区",
 		"id": "迷城陆区",
 		"title": "迷城陆区",
 		"type": "Frida",
-		"version": "1.2.2",
+		"version": "1.2.3",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/迷城陆区/Frida.js",
 		"desc": "倍攻(可破坏地形, 不分敌我)、无敌(可配合倍攻使用)、一击必杀(仅对NPC起效)、解锁DLC、解锁角色、解锁皮肤、随机UID、阶段解锁(可存档)",
 		"down_count": 999
