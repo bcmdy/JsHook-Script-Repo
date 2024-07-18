@@ -93,14 +93,14 @@
 	{
 		"author": "墨殇",
 		"markdown": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/mDNF韩服/README.md",
-		"ctime": "2024/7/18 16:10:12",
+		"ctime": "2024/7/18 19:10:12",
 		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/mDNF韩服",
 		"id": "mDNF韩服",
 		"title": "mDNF韩服",
 		"type": "Frida",
-		"version": "1.0.1",
+		"version": "1.2.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/mDNF韩服/Frida.js",
-		"desc": "请在角色选择界面使用Ptrace注入脚本, 或计算载入时间使用HOOK服务延迟注入脚本(目前测试延迟25-30秒左右到)",
+		"desc": "更新过检测方法, 进图提示错误请无视, 有问题群里@我",
 		"down_count": 999
 	},
 	{
