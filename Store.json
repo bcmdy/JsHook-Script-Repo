@@ -93,14 +93,14 @@
 	{
 		"author": "墨殇",
 		"markdown": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/mDNF韩服/README.md",
-		"ctime": "2024/7/14 23:03:11",
+		"ctime": "2024/7/18 16:10:12",
 		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/mDNF韩服",
 		"id": "mDNF韩服",
 		"title": "mDNF韩服",
 		"type": "Frida",
 		"version": "1.0.1",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/mDNF韩服/Frida.js",
-		"desc": "目前暂无法使用, 等待JsHook正式版更新JsHook ≥ V1.2.5, 框架版本 ≥ V1.2.8_1208",
+		"desc": "请在角色选择界面使用Ptrace注入脚本, 或计算载入时间使用HOOK服务延迟注入脚本(目前测试延迟25-30秒左右到)",
 		"down_count": 999
 	},
 	{
