@@ -38,8 +38,13 @@ jobs:
           # Deletes the most recent tag in the local repository
         run: |
           git fetch --tags
-          git tag -d $(git describe --tags `git rev-list --tags --max-count=1`)
-          git push origin :refs/tags/$(git describe --tags `git rev-list --tags --max-count=1`)
+          latest_tag=$(git describe --tags `git rev-list --tags --max-count=1`)
+          if [ -z "$latest_tag" ]; then
+            echo "No tags found."
+          else
+            git tag -d $latest_tag
+            git push origin --delete $latest_tag
+          fi
       - name: Create and push new tag
           # Creates a new annotated tag and pushes it to the remote repository
         run: |
