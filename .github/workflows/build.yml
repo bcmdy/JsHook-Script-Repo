@@ -39,7 +39,7 @@ jobs:
         run: |
           git fetch --tags
           git tag -d $(git describe --tags `git rev-list --tags --max-count=1`)
-          git push
+          git push origin --delete $(git describe --tags `git rev-list --tags --max-count=1`)
       - name: Create and push new tag
           # Creates a new annotated tag and pushes it to the remote repository
         run: |
