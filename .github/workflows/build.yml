@@ -22,9 +22,9 @@ jobs:
         uses: actions/checkout@v3
       - name: use Node.js 10
          # 使用action库  actions/setup-node安装node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 20
       - name: Build Store.json&Store-cdn.json
         run: node ./buildstore.js
       - name: git push
@@ -34,3 +34,21 @@ jobs:
           git add .
           git commit -m "Action Updates"
           git push
+  delete_and_create_tag:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+ 
+    - name: Delete old tag
+      # Deletes the most recent tag in the local repository
+      run: |
+        git fetch --tags
+        git tag -d $(git describe --tags `git rev-list --tags --max-count=1`)
+    - name: Create and push new tag
+      # Creates a new annotated tag and pushes it to the remote repository
+      run: |
+        git tag -a v1.0.0 -m "Release 1.0.0"
+        git push origin v1.0.0
