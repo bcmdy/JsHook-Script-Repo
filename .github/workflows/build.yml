@@ -42,5 +42,5 @@ jobs:
       - name: Create and push new tag
           # Creates a new annotated tag and pushes it to the remote repository
         run: |
-          git tag -a v1.0.0 -m "Release 1.0.0"
-          git push origin v1.0.0
+          git tag -a v1.0.1 -m "Release 1.0.1"
+          git push origin v1.0.1
