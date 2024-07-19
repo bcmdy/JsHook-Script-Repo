@@ -47,5 +47,7 @@ jobs:
       - name: Create and push new tag
           # Creates a new annotated tag and pushes it to the remote repository
         run: |
+          timestamp=$(date +'%Y%m%d%H%M%S')
+          git tag -a $timestamp -m "备份: $timestamp"
           git tag -a master -m "发布仓库"
           git push origin master
