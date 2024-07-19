@@ -49,5 +49,6 @@ jobs:
         run: |
           timestamp=$(date +'%Y%m%d%H%M%S')
           git tag -a $timestamp -m "备份: $timestamp"
+          git push origin $timestamp
           git tag -a master -m "发布仓库"
           git push origin master
