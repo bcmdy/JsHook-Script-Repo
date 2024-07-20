@@ -15,10 +15,14 @@ function generateStoreObject(filePath) {
     const descriptionMatch = content.match(/^# 描述\s+([\s\S]*?)$/m);
     const ctimeMatch = content.match(/^# 更新时间\s+(.*)$/m);
 
-    if (!nameMatch || !versionMatch || !scriptTypeMatch || !authorMatch || !descriptionMatch || !ctimeMatch) {
+    if (!nameMatch || !versionMatch || !scriptTypeMatch || !authorMatch || !descriptionMatch) {
         return null;
     }
-
+    if (ctime == null) {
+        ctime = fs.statSync(filePath + scriptType + ".js").ctime.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
+        fs.writeFileSync(allFiles[i], content + "\r\n# 更新时间\r\n" + ctime);
+        console.log(allFiles[i] + "未找到更新时间,自动识别为最后修改时间");
+    }
     const name = nameMatch[1];
     const version = versionMatch[1];
     const scriptType = scriptTypeMatch[1];
