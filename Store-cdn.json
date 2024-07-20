@@ -1,5 +1,18 @@
 [
 	{
+		"author": "lasting-yang",
+		"markdown": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/dump_dex/README.md",
+		"ctime": "2023/6/2 18:17:28",
+		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/dump_dex",
+		"id": "dump_dex",
+		"title": "dump_dex",
+		"type": "Frida",
+		"version": "1.0",
+		"url": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/dump_dex/Frida.js",
+		"desc": "Dex脱壳脚本2",
+		"down_count": 999
+	},
+	{
 		"author": "hluwa",
 		"markdown": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/FRIDA-DEXDump/README.md",
 		"ctime": "2023/6/2 18:17:28",
@@ -39,6 +52,19 @@
 		"down_count": 999
 	},
 	{
+		"author": "墨殇",
+		"markdown": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/mDNF韩服/README.md",
+		"ctime": "2024/7/20 11:16:02",
+		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/mDNF韩服",
+		"id": "mDNF韩服",
+		"title": "mDNF韩服",
+		"type": "Frida",
+		"version": "1.2.1",
+		"url": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/mDNF韩服/Frida.js",
+		"desc": "更新过检测方法, 进图提示错误请无视, 有问题群里@我",
+		"down_count": 999
+	},
+	{
 		"author": "墨殇收集整理",
 		"markdown": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/SmileSoft-全屏翻译/README.md",
 		"ctime": "2023/10/10 10:02:17",
@@ -75,19 +101,6 @@
 		"version": "1.1",
 		"url": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/Unity Dump/Frida.js",
 		"desc": "Unity Dump 内存dump 获得基于Unity3d的游戏相关代码",
-		"down_count": 999
-	},
-	{
-		"author": "lasting-yang",
-		"markdown": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/dump_dex/README.md",
-		"ctime": "2023/6/2 18:17:28",
-		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/dump_dex",
-		"id": "dump_dex",
-		"title": "dump_dex",
-		"type": "Frida",
-		"version": "1.0",
-		"url": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/dump_dex/Frida.js",
-		"desc": "Dex脱壳脚本2",
 		"down_count": 999
 	},
 	{
