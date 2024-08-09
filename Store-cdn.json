@@ -132,14 +132,14 @@
 	{
 		"author": "墨殇",
 		"markdown": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/英雄生存IO/README.md",
-		"ctime": "2024/6/29 20:26:16",
+		"ctime": "2024/8/9 23:07:28",
 		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/英雄生存IO",
 		"id": "英雄生存IO",
 		"title": "英雄生存IO",
 		"type": "Frida",
-		"version": "2.0.0",
+		"version": "3.0.0",
 		"url": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Scripts/英雄生存IO/Frida.js",
-		"desc": "游戏加速、怪物加速、伤害加倍、无敌",
+		"desc": "修复新版装备添加错误",
 		"down_count": 999
 	},
 	{
