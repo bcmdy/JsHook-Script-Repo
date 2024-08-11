@@ -1,0 +1,60 @@
+name: 🔨 自动构建和发布仓库
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+  # pull_request:
+  #   branches: [ "main" ]
+permissions:
+  contents: write
+
+# 一个workflow由执行的一项或多项job
+jobs:
+  # 一个job任务，任务名为build
+  build:
+    # runs-on 指定job任务运行所需要的虚拟机环境(必填字段)
+    runs-on: ubuntu-latest
+    # steps是每个Job的运行步骤，可以包含一个或多个步骤
+    steps:
+      # action命令，切换分支获取源码
+      - name: 📥 获取源码
+      # 使用action库  actions/checkout获取源码
+        uses: actions/checkout@v4
+      # 使用action库  actions/setup-node安装node
+      - name: 📚 安装Node.js
+         # 使用action库  actions/setup-node安装node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      # 运行构建脚本
+      - name: 🔨 构建仓库文件
+        run: node ./buildstore.js
+      # 提交更改到远程仓库
+      - name: 📤 提交更改
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add .
+          git commit -m "Action Updates"
+          git push
+      # 删除旧的标签
+      - name: 🗑️ 删除旧标签
+          # Deletes the most recent tag in the local repository
+        run: |
+          git fetch --tags
+          if [ -z "master" ]; then
+            echo "No tags found."
+          else
+            git tag -d master
+            git push origin --delete master
+          fi
+      # 创建新的标签并推送到远程仓库
+      - name: 🏷️ 创建新标签并推送
+          # Creates a new annotated tag and pushes it to the remote repository
+        run: |
+          timestamp=$(date +'%Y%m%d%H%M%S')
+          git tag -a $timestamp -m "备份: $timestamp"
+          git push origin $timestamp
+          git tag -a master -m "发布仓库"
+          git push origin master

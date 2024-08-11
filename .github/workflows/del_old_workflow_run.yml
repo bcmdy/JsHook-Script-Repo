@@ -1,0 +1,73 @@
+name: 🚮 删除旧的工作流运行
+# 该工作流用于删除旧的工作流运行，并且支持删除特定的工作流。
+
+on:
+  workflow_dispatch:
+    inputs:
+      # 设置要删除的工作流运行的天数
+      days:
+        description: "⏰ 设置要删除的工作流运行的天数"
+        required: true
+        default: "30"
+
+      # 设置每个工作流的保留最小运行数
+      minimum_runs:
+        description: "📊 设置每个工作流的保留最小运行数"
+        required: true
+        default: "6"
+
+      # 设置要删除的工作流的名称或文件名。如果未设置，则删除所有工作流。
+      delete_workflow_pattern:
+        description: "📋 设置要删除的工作流的名称或文件名。如果未设置，则删除所有工作流。"
+        required: false
+
+      # 设置要删除的工作流的状态，支持：活动、已删除、已禁用分支、已禁用无活动、已禁用手动
+      delete_workflow_by_state_pattern:
+        description: "📏 设置要删除的工作流的状态，支持：活动、已删除、已禁用分支、已禁用无活动、已禁用手动"
+        required: true
+        default: "All"
+        type: choice
+        options:
+          - "All"
+          - active
+          - deleted
+          - disabled_fork
+          - disabled_inactivity
+          - disabled_manually
+
+      # 设置要删除的工作流运行的结论，支持：需要操作、取消、失败、跳过、成功
+      delete_run_by_conclusion_pattern:
+        description: "📈 设置要删除的工作流运行的结论，支持：需要操作、取消、失败、跳过、成功"
+        required: true
+        default: "All"
+        type: choice
+        options:
+          - "All"
+          - action_required
+          - cancelled
+          - failure
+          - skipped
+          - success
+
+      # 设置是否仅记录操作，不执行任何删除操作。
+      dry_run:
+        description: "📝 设置是否仅记录操作，不执行任何删除操作。"
+        required: false
+
+jobs:
+  del_runs:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: 🚮 删除工作流运行
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: ${{ github.event.inputs.days }}
+          keep_minimum_runs: ${{ github.event.inputs.minimum_runs }}
+          delete_workflow_pattern: ${{ github.event.inputs.delete_workflow_pattern }}
+          delete_workflow_by_state_pattern: ${{ github.event.inputs.delete_workflow_by_state_pattern }}
+          delete_run_by_conclusion_pattern: ${{ github.event.inputs.delete_run_by_conclusion_pattern }}
+          dry_run: ${{ github.event.inputs.dry_run }}

@@ -1,0 +1,10 @@
+{
+    "name": "墨殇的仓库CDN",
+    "icon": null,
+    "list": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/Store-cdn.json",
+    "push": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/msg/msg-cdn.json",
+    "markdown": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@master/README.md",
+    "group_qq": null,
+    "group_tg": "jshookgroup",
+    "user_count": 9527
+} 

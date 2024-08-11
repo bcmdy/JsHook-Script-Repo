@@ -1,0 +1,52 @@
+name: Updates.bak
+
+on:
+  # push:
+  #   branches: [ "main" ]
+  workflow_dispatch:
+  # pull_request:
+  #   branches: [ "main" ]
+permissions:
+  contents: write
+# 一个workflow由执行的一项或多项job
+jobs:
+  # 一个job任务，任务名为build
+  build:
+    # runs-on 指定job任务运行所需要的虚拟机环境(必填字段)
+    runs-on: ubuntu-latest
+    # steps是每个Job的运行步骤，可以包含一个或多个步骤
+    steps:
+      # action命令，切换分支获取源码
+      - name: Checkout
+      # 使用action库  actions/checkout获取源码
+        uses: actions/checkout@v4
+      - name: use Node.js 20
+         # 使用action库  actions/setup-node安装node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build Store.json&Store-cdn.json
+        run: node ./buildstore.js
+      - name: git push
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add .
+          git commit -m "Action Updates"
+          git push
+      - name: Delete old tag
+          # Deletes the most recent tag in the local repository
+        run: |
+          git fetch --tags
+          latest_tag=$(git describe --tags `git rev-list --tags --max-count=1`)
+          if [ -z "$latest_tag" ]; then
+            echo "No tags found."
+          else
+            git tag -d $latest_tag
+            git push origin --delete $latest_tag
+          fi
+      - name: Create and push new tag
+          # Creates a new annotated tag and pushes it to the remote repository
+        run: |
+          git tag -a master -m "Release 1.0.0"
+          git push origin master
