@@ -27,30 +27,43 @@ function generateStoreObject(filePath) {
     const ctime = ctimeMatch[1];
     // 取10-999随机数
     const down_count = Math.floor(Math.random() * 900) + 10;
+    const branch = "master";
     const store = {
         "author": author,
-        "markdown": `https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/${name}/README.md`,
+        "markdown": `https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/${branch}/Scripts/${name}/README.md`,
         "ctime": ctime,
-        "source": `https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/${name}`,
+        "source": `https://github.com/bcmdy/JsHook-Script-Repo/tree/${branch}/Scripts/${name}`,
         "id": name,
         "title": name,
         "type": scriptType,
         "version": version,
-        "url": `https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/${name}/${scriptType}.js`,
+        "url": `https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/${branch}/Scripts/${name}/${scriptType}.js`,
         "desc": description,
         "down_count": down_count
     };
-    const branch = "master";
+    // const store_cdn = {
+    //     "author": author,
+    //     "markdown": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@" + branch + "/Scripts/" + name + "/README.md",
+    //     "ctime": ctime,
+    //     "source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/" + branch + "/Scripts/" + name,
+    //     "id": name,
+    //     "title": name,
+    //     "type": scriptType,
+    //     "version": version,
+    //     "url": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@" + branch + "/Scripts/" + name + "/" + scriptType + ".js",
+    //     "desc": description,
+    //     "down_count": down_count
+    // };
     const store_cdn = {
         "author": author,
-        "markdown": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@" + branch + "/Scripts/" + name + "/README.md",
+        "markdown": `https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/${branch}/Scripts/${name}/README.md`,
         "ctime": ctime,
-        "source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/" + branch + "/Scripts/" + name,
+        "source": `https://github.com/bcmdy/JsHook-Script-Repo/tree/${branch}/Scripts/${name}`,
         "id": name,
         "title": name,
         "type": scriptType,
         "version": version,
-        "url": "https://cdn.jsdelivr.net/gh/bcmdy/JsHook-Script-Repo@" + branch + "/Scripts/" + name + "/" + scriptType + ".js",
+        "url": `https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/${branch}/Scripts/${name}/${scriptType}.js`,
         "desc": description,
         "down_count": down_count
     };
