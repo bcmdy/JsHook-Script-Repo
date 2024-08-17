@@ -10,7 +10,7 @@
 		"version": "1.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/FRIDA-DEXDump/Frida.js",
 		"desc": "Dex脱壳脚本1",
-		"down_count": 746
+		"down_count": 132
 	},
 	{
 		"author": "JSHook",
@@ -23,7 +23,7 @@
 		"version": "1.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/Frida通杀java层算法/Frida.js",
 		"desc": "Frida通杀java层算法",
-		"down_count": 880
+		"down_count": 539
 	},
 	{
 		"author": "墨殇",
@@ -36,7 +36,7 @@
 		"version": "3.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/GG大玩家Patch/Frida.js",
 		"desc": "GG大玩家目前已经跑路, 脚本解密公开，仅供学习交流使用",
-		"down_count": 873
+		"down_count": 525
 	},
 	{
 		"author": "墨殇收集整理",
@@ -49,7 +49,7 @@
 		"version": "1.2.38",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/SmileSoft-全屏翻译/Rhino.js",
 		"desc": "Rhino框架,启动配置建议延时10-20ms,随机请求ID,无限10次试用.具体作者不详,@墨殇搜集整理,不保证可用.",
-		"down_count": 395
+		"down_count": 370
 	},
 	{
 		"author": "墨殇",
@@ -62,7 +62,7 @@
 		"version": "3.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/Steam令牌提取/Frida.js",
 		"desc": "Steam令牌提取",
-		"down_count": 687
+		"down_count": 97
 	},
 	{
 		"author": "墨殇",
@@ -75,7 +75,7 @@
 		"version": "1.1",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/Unity Dump/Frida.js",
 		"desc": "Unity Dump 内存dump 获得基于Unity3d的游戏相关代码",
-		"down_count": 909
+		"down_count": 50
 	},
 	{
 		"author": "lasting-yang",
@@ -88,7 +88,7 @@
 		"version": "1.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/dump_dex/Frida.js",
 		"desc": "Dex脱壳脚本2",
-		"down_count": 393
+		"down_count": 825
 	},
 	{
 		"author": "墨殇",
@@ -101,7 +101,7 @@
 		"version": "1.2.1",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/mDNF韩服/Frida.js",
 		"desc": "更新过检测方法, 进图提示错误请无视, 有问题群里@我",
-		"down_count": 125
+		"down_count": 378
 	},
 	{
 		"author": "墨殇",
@@ -114,7 +114,7 @@
 		"version": "4.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/番茄免费小说/Rhino.js",
 		"desc": "这是一个Rhino&Frida脚本, 自动适配HOOK框架。HOOK番茄免费小说(com.dragon.read)Vip破解。最新测试支持v5.9.9.32",
-		"down_count": 62
+		"down_count": 346
 	},
 	{
 		"author": "墨殇",
@@ -127,7 +127,7 @@
 		"version": "1.0.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/石油大亨/Frida.js",
 		"desc": "解锁付费",
-		"down_count": 380
+		"down_count": 667
 	},
 	{
 		"author": "墨殇",
@@ -140,7 +140,7 @@
 		"version": "3.0.2",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/英雄生存IO/Frida.js",
 		"desc": "修复新版装备添加错误",
-		"down_count": 863
+		"down_count": 357
 	},
 	{
 		"author": "墨殇",
@@ -153,7 +153,7 @@
 		"version": "1.2",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/见习猎魔团/Frida.js",
 		"desc": "无敌秒杀",
-		"down_count": 47
+		"down_count": 637
 	},
 	{
 		"author": "墨殇",
@@ -166,7 +166,7 @@
 		"version": "1.2.3",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/迷城陆区/Frida.js",
 		"desc": "倍攻(可破坏地形, 不分敌我)、无敌(可配合倍攻使用)、一击必杀(仅对NPC起效)、解锁DLC、解锁角色、解锁皮肤、随机UID、阶段解锁(可存档)",
-		"down_count": 386
+		"down_count": 402
 	},
 	{
 		"author": "墨殇",
@@ -179,6 +179,6 @@
 		"version": "1.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/音量键开关菜单/Frida.js",
 		"desc": "例子 音量键开关菜单",
-		"down_count": 114
+		"down_count": 51
 	}
 ]
