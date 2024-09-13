@@ -1,7 +1,7 @@
 # 名称
 Frida通杀java层算法
 # Version
-1.0
+2.0
 # 脚本类型
 Frida
 # 描述

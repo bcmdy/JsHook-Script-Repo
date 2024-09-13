@@ -1,6 +1,13 @@
 var N_ENCRYPT_MODE = 1
 var N_DECRYPT_MODE = 2
 
+/**
+ * @description 显示当前Java调用栈
+ * @author      bcmdy
+ * @date        2023/6/2
+ * @example
+ * showStacks()
+ */
 function showStacks() {
     var Exception = Java.use("java.lang.Exception");
     var ins = Exception.$new("Exception");
@@ -10,16 +17,16 @@ function showStacks() {
         return;
     }
 
-    common.log("============================= Stack strat=======================");
-    common.log("");
+    console.log("============================= Stack strat=======================");
+    console.log("");
 
     for (var i = 0; i < straces.length; i++) {
         var str = "   " + straces[i].toString();
-        common.log(str);
+        console.log(str);
     }
 
-    common.log("");
-    common.log("============================= Stack end=======================\r\n");
+    console.log("");
+    console.log("============================= Stack end=======================\r\n");
     Exception.$dispose();
 }
 
@@ -27,23 +34,23 @@ function showStacks() {
 var base64EncodeChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/',
     base64DecodeChars = new Array((-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), (-1), 62, (-1), (-1), (-1), 63, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, (-1), (-1), (-1), (-1), (-1), (-1), (-1), 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, (-1), (-1), (-1), (-1), (-1), (-1), 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, (-1), (-1), (-1), (-1), (-1));
 
-function stringToBase64(e) {
+function stringToBase64(str) {
     var r, a, c, h, o, t;
-    for (c = e.length, a = 0, r = ''; a < c;) {
-        if (h = 255 & e.charCodeAt(a++), a == c) {
+    for (c = str.length, a = 0, r = ''; a < c;) {
+        if (h = 255 & str.charCodeAt(a++), a == c) {
             r += base64EncodeChars.charAt(h >> 2),
                 r += base64EncodeChars.charAt((3 & h) << 4),
                 r += '==';
             break
         }
-        if (o = e.charCodeAt(a++), a == c) {
+        if (o = str.charCodeAt(a++), a == c) {
             r += base64EncodeChars.charAt(h >> 2),
                 r += base64EncodeChars.charAt((3 & h) << 4 | (240 & o) >> 4),
                 r += base64EncodeChars.charAt((15 & o) << 2),
                 r += '=';
             break
         }
-        t = e.charCodeAt(a++),
+        t = str.charCodeAt(a++),
             r += base64EncodeChars.charAt(h >> 2),
             r += base64EncodeChars.charAt((3 & h) << 4 | (240 & o) >> 4),
             r += base64EncodeChars.charAt((15 & o) << 2 | (192 & t) >> 6),
@@ -230,9 +237,9 @@ Java.perform(function () {
     secretKeySpec.$init.overload('[B', 'java.lang.String').implementation = function (a, b) {
         showStacks();
         var result = this.$init(a, b);
-        common.log("======================================");
-        common.log("算法名：" + b + "|str密钥:" + bytesToString(a));
-        common.log("算法名：" + b + "|Hex密钥:" + bytesToHex(a));
+        console.log("======================================");
+        console.log("算法名：" + b + "|str密钥:" + bytesToString(a));
+        console.log("算法名：" + b + "|Hex密钥:" + bytesToHex(a));
         return result;
     }
 
@@ -240,20 +247,20 @@ Java.perform(function () {
     DESKeySpec.$init.overload('[B').implementation = function (a) {
         showStacks();
         var result = this.$init(a);
-        common.log("======================================");
+        console.log("======================================");
         var bytes_key_des = this.getKey();
-        common.log("des密钥  |str " + bytesToString(bytes_key_des));
-        common.log("des密钥  |hex " + bytesToHex(bytes_key_des));
+        console.log("des密钥  |str " + bytesToString(bytes_key_des));
+        console.log("des密钥  |hex " + bytesToHex(bytes_key_des));
         return result;
     }
 
     DESKeySpec.$init.overload('[B', 'int').implementation = function (a, b) {
         showStacks();
         var result = this.$init(a, b);
-        common.log("======================================");
+        console.log("======================================");
         var bytes_key_des = this.getKey();
-        common.log("des密钥  |str " + bytesToString(bytes_key_des));
-        common.log("des密钥  |hex " + bytesToHex(bytes_key_des));
+        console.log("des密钥  |str " + bytesToString(bytes_key_des));
+        console.log("des密钥  |hex " + bytesToHex(bytes_key_des));
         return result;
     }
 
@@ -261,84 +268,84 @@ Java.perform(function () {
     mac.getInstance.overload('java.lang.String').implementation = function (a) {
         showStacks();
         var result = this.getInstance(a);
-        common.log("======================================");
-        common.log("算法名：" + a);
+        console.log("======================================");
+        console.log("算法名：" + a);
         return result;
     }
     mac.update.overload('[B').implementation = function (a) {
         //showStacks();
         this.update(a);
-        common.log("======================================");
-        common.log("update:" + bytesToString(a))
+        console.log("======================================");
+        console.log("update:" + bytesToString(a))
     }
     mac.update.overload('[B', 'int', 'int').implementation = function (a, b, c) {
         //showStacks();
         this.update(a, b, c)
-        common.log("======================================");
-        common.log("update:" + bytesToString(a) + "|" + b + "|" + c);
+        console.log("======================================");
+        console.log("update:" + bytesToString(a) + "|" + b + "|" + c);
     }
     mac.doFinal.overload().implementation = function () {
         //showStacks();
         var result = this.doFinal();
-        common.log("======================================");
-        common.log("doFinal结果: |str  :"     + bytesToString(result));
-        common.log("doFinal结果: |hex  :"     + bytesToHex(result));
-        common.log("doFinal结果: |base64  :"  + bytesToBase64(result));
+        console.log("======================================");
+        console.log("doFinal结果: |str  :" + bytesToString(result));
+        console.log("doFinal结果: |hex  :" + bytesToHex(result));
+        console.log("doFinal结果: |base64  :" + bytesToBase64(result));
         return result;
     }
     mac.doFinal.overload('[B').implementation = function (a) {
         //showStacks();
         var result = this.doFinal(a);
-        common.log("======================================");
-        common.log("doFinal参数: |str  :"     + bytesToString(a));
-        common.log("doFinal参数: |hex  :"     + bytesToHex(a));
-        common.log("doFinal结果: |str  :"     + bytesToString(result));
-        common.log("doFinal结果: |hex  :"     + bytesToHex(result));
-        common.log("doFinal结果: |base64  :"  + bytesToBase64(result));
+        console.log("======================================");
+        console.log("doFinal参数: |str  :" + bytesToString(a));
+        console.log("doFinal参数: |hex  :" + bytesToHex(a));
+        console.log("doFinal结果: |str  :" + bytesToString(result));
+        console.log("doFinal结果: |hex  :" + bytesToHex(result));
+        console.log("doFinal结果: |base64  :" + bytesToBase64(result));
         return result;
     }
 
     var md = Java.use('java.security.MessageDigest');
     md.getInstance.overload('java.lang.String', 'java.lang.String').implementation = function (a, b) {
         //showStacks();
-        common.log("======================================");
-        common.log("算法名：" + a);
+        console.log("======================================");
+        console.log("算法名：" + a);
         return this.getInstance(a, b);
     }
     md.getInstance.overload('java.lang.String').implementation = function (a) {
         //showStacks();
-        common.log("======================================");
-        common.log("算法名：" + a);
+        console.log("======================================");
+        console.log("算法名：" + a);
         return this.getInstance(a);
     }
     md.update.overload('[B').implementation = function (a) {
         //showStacks();
-        common.log("======================================");
-        common.log("update:" + bytesToString(a))
+        console.log("======================================");
+        console.log("update:" + bytesToString(a))
         return this.update(a);
     }
     md.update.overload('[B', 'int', 'int').implementation = function (a, b, c) {
         //showStacks();
-        common.log("======================================");
-        common.log("update:" + bytesToString(a) + "|" + b + "|" + c);
+        console.log("======================================");
+        console.log("update:" + bytesToString(a) + "|" + b + "|" + c);
         return this.update(a, b, c);
     }
     md.digest.overload().implementation = function () {
         //showStacks();
-        common.log("======================================");
+        console.log("======================================");
         var result = this.digest();
-        common.log("digest结果 |hex:" + bytesToHex(result));
-        common.log("digest结果 |base64:" + bytesToBase64(result));
+        console.log("digest结果 |hex:" + bytesToHex(result));
+        console.log("digest结果 |base64:" + bytesToBase64(result));
         return result;
     }
     md.digest.overload('[B').implementation = function (a) {
         //showStacks();
-        common.log("======================================");
-        common.log("digest参数 |str:" + bytesToString(a));
-        common.log("digest参数 |hex:" + bytesToHex(a));
+        console.log("======================================");
+        console.log("digest参数 |str:" + bytesToString(a));
+        console.log("digest参数 |hex:" + bytesToHex(a));
         var result = this.digest(a);
-        common.log("digest结果: |hex" + bytesToHex(result));
-        common.log("digest结果: |base64" + bytesToBase64(result));
+        console.log("digest结果: |hex" + bytesToHex(result));
+        console.log("digest结果: |base64" + bytesToBase64(result));
         return result;
     }
 
@@ -346,9 +353,9 @@ Java.perform(function () {
     ivParameterSpec.$init.overload('[B').implementation = function (a) {
         //showStacks();
         var result = this.$init(a);
-        common.log("======================================");
-        common.log("iv向量: |str:" + bytesToString(a));
-        common.log("iv向量: |hex:" + bytesToHex(a));
+        console.log("======================================");
+        console.log("iv向量: |str:" + bytesToString(a));
+        console.log("iv向量: |hex:" + bytesToHex(a));
         return result;
     }
 
@@ -356,40 +363,36 @@ Java.perform(function () {
     cipher.getInstance.overload('java.lang.String').implementation = function (a) {
         //showStacks();
         var result = this.getInstance(a);
-        common.log("======================================");
-        common.log("模式填充:" + a);
+        console.log("======================================");
+        console.log("模式填充:" + a);
         return result;
     }
     cipher.init.overload('int', 'java.security.Key').implementation = function (a, b) {
         //showStacks();
         var result = this.init(a, b);
-        common.log("======================================");
-        if (N_ENCRYPT_MODE == a) 
-        {
-            common.log("init  | 加密模式");    
+        console.log("======================================");
+        if (N_ENCRYPT_MODE == a) {
+            console.log("init  | 加密模式");
         }
-        else if(N_DECRYPT_MODE == a)
-        {
-            common.log("init  | 解密模式");    
+        else if (N_DECRYPT_MODE == a) {
+            console.log("init  | 解密模式");
         }
 
         var bytes_key = b.getEncoded();
-        common.log("init key:" + "|str密钥:" + bytesToString(bytes_key));
-        common.log("init key:" + "|Hex密钥:" + bytesToHex(bytes_key));
+        console.log("init key:" + "|str密钥:" + bytesToString(bytes_key));
+        console.log("init key:" + "|Hex密钥:" + bytesToHex(bytes_key));
         return result;
     }
     cipher.init.overload('int', 'java.security.cert.Certificate').implementation = function (a, b) {
         //showStacks();
         var result = this.init(a, b);
-        common.log("======================================");
-        
-        if (N_ENCRYPT_MODE == a) 
-        {
-            common.log("init  | 加密模式");    
+        console.log("======================================");
+
+        if (N_ENCRYPT_MODE == a) {
+            console.log("init  | 加密模式");
         }
-        else if(N_DECRYPT_MODE == a)
-        {
-            common.log("init  | 解密模式");    
+        else if (N_DECRYPT_MODE == a) {
+            console.log("init  | 解密模式");
         }
 
         return result;
@@ -397,137 +400,125 @@ Java.perform(function () {
     cipher.init.overload('int', 'java.security.Key', 'java.security.spec.AlgorithmParameterSpec').implementation = function (a, b, c) {
         //showStacks();
         var result = this.init(a, b, c);
-        common.log("======================================");
-        
-        if (N_ENCRYPT_MODE == a) 
-        {
-            common.log("init  | 加密模式");    
+        console.log("======================================");
+
+        if (N_ENCRYPT_MODE == a) {
+            console.log("init  | 加密模式");
         }
-        else if(N_DECRYPT_MODE == a)
-        {
-            common.log("init  | 解密模式");    
+        else if (N_DECRYPT_MODE == a) {
+            console.log("init  | 解密模式");
         }
-     
+
         var bytes_key = b.getEncoded();
-        common.log("init key:" + "|str密钥:" + bytesToString(bytes_key));
-        common.log("init key:" + "|Hex密钥:" + bytesToHex(bytes_key));
+        console.log("init key:" + "|str密钥:" + bytesToString(bytes_key));
+        console.log("init key:" + "|Hex密钥:" + bytesToHex(bytes_key));
 
         return result;
     }
     cipher.init.overload('int', 'java.security.cert.Certificate', 'java.security.SecureRandom').implementation = function (a, b, c) {
         //showStacks();
         var result = this.init(a, b, c);
-        if (N_ENCRYPT_MODE == a) 
-        {
-            common.log("init  | 加密模式");    
+        if (N_ENCRYPT_MODE == a) {
+            console.log("init  | 加密模式");
         }
-        else if(N_DECRYPT_MODE == a)
-        {
-            common.log("init  | 解密模式");    
+        else if (N_DECRYPT_MODE == a) {
+            console.log("init  | 解密模式");
         }
         return result;
     }
     cipher.init.overload('int', 'java.security.Key', 'java.security.SecureRandom').implementation = function (a, b, c) {
         //showStacks();
         var result = this.init(a, b, c);
-        if (N_ENCRYPT_MODE == a) 
-        {
-            common.log("init  | 加密模式");    
+        if (N_ENCRYPT_MODE == a) {
+            console.log("init  | 加密模式");
         }
-        else if(N_DECRYPT_MODE == a)
-        {
-            common.log("init  | 解密模式");    
+        else if (N_DECRYPT_MODE == a) {
+            console.log("init  | 解密模式");
         }
 
-         var bytes_key = b.getEncoded();
-        common.log("init key:" + "|str密钥:" + bytesToString(bytes_key));
-        common.log("init key:" + "|Hex密钥:" + bytesToHex(bytes_key));
+        var bytes_key = b.getEncoded();
+        console.log("init key:" + "|str密钥:" + bytesToString(bytes_key));
+        console.log("init key:" + "|Hex密钥:" + bytesToHex(bytes_key));
         return result;
     }
     cipher.init.overload('int', 'java.security.Key', 'java.security.AlgorithmParameters').implementation = function (a, b, c) {
         //showStacks();
         var result = this.init(a, b, c);
-        if (N_ENCRYPT_MODE == a) 
-        {
-            common.log("init  | 加密模式");    
+        if (N_ENCRYPT_MODE == a) {
+            console.log("init  | 加密模式");
         }
-        else if(N_DECRYPT_MODE == a)
-        {
-            common.log("init  | 解密模式");    
+        else if (N_DECRYPT_MODE == a) {
+            console.log("init  | 解密模式");
         }
 
         var bytes_key = b.getEncoded();
-        common.log("init key:" + "|str密钥:" + bytesToString(bytes_key));
-        common.log("init key:" + "|Hex密钥:" + bytesToHex(bytes_key));
+        console.log("init key:" + "|str密钥:" + bytesToString(bytes_key));
+        console.log("init key:" + "|Hex密钥:" + bytesToHex(bytes_key));
         return result;
     }
     cipher.init.overload('int', 'java.security.Key', 'java.security.AlgorithmParameters', 'java.security.SecureRandom').implementation = function (a, b, c, d) {
         //showStacks();
         var result = this.init(a, b, c, d);
-        if (N_ENCRYPT_MODE == a) 
-        {
-            common.log("init  | 加密模式");    
+        if (N_ENCRYPT_MODE == a) {
+            console.log("init  | 加密模式");
         }
-        else if(N_DECRYPT_MODE == a)
-        {
-            common.log("init  | 解密模式");    
+        else if (N_DECRYPT_MODE == a) {
+            console.log("init  | 解密模式");
         }
 
         var bytes_key = b.getEncoded();
-        common.log("init key:" + "|str密钥:" + bytesToString(bytes_key));
-        common.log("init key:" + "|Hex密钥:" + bytesToHex(bytes_key));
+        console.log("init key:" + "|str密钥:" + bytesToString(bytes_key));
+        console.log("init key:" + "|Hex密钥:" + bytesToHex(bytes_key));
         return result;
     }
     cipher.init.overload('int', 'java.security.Key', 'java.security.spec.AlgorithmParameterSpec', 'java.security.SecureRandom').implementation = function (a, b, c, d) {
         //showStacks();
         var result = this.init(a, b, c, d);
-        if (N_ENCRYPT_MODE == a) 
-        {
-            common.log("init  | 加密模式");    
+        if (N_ENCRYPT_MODE == a) {
+            console.log("init  | 加密模式");
         }
-        else if(N_DECRYPT_MODE == a)
-        {
-            common.log("init  | 解密模式");    
+        else if (N_DECRYPT_MODE == a) {
+            console.log("init  | 解密模式");
         }
 
-         var bytes_key = b.getEncoded();
-        common.log("init key:" + "|str密钥:" + bytesToString(bytes_key));
-        common.log("init key:" + "|Hex密钥:" + bytesToHex(bytes_key));
+        var bytes_key = b.getEncoded();
+        console.log("init key:" + "|str密钥:" + bytesToString(bytes_key));
+        console.log("init key:" + "|Hex密钥:" + bytesToHex(bytes_key));
         return result;
     }
 
     cipher.update.overload('[B').implementation = function (a) {
         //showStacks();
         var result = this.update(a);
-        common.log("======================================");
-        common.log("update:" + bytesToString(a));
+        console.log("======================================");
+        console.log("update:" + bytesToString(a));
         return result;
     }
     cipher.update.overload('[B', 'int', 'int').implementation = function (a, b, c) {
         //showStacks();
         var result = this.update(a, b, c);
-        common.log("======================================");
-        common.log("update:" + bytesToString(a) + "|" + b + "|" + c);
+        console.log("======================================");
+        console.log("update:" + bytesToString(a) + "|" + b + "|" + c);
         return result;
     }
     cipher.doFinal.overload().implementation = function () {
         //showStacks();
         var result = this.doFinal();
-        common.log("======================================");
-        common.log("doFinal结果: |str  :"     + bytesToString(result));
-        common.log("doFinal结果: |hex  :"     + bytesToHex(result));
-        common.log("doFinal结果: |base64  :"  + bytesToBase64(result));
+        console.log("======================================");
+        console.log("doFinal结果: |str  :" + bytesToString(result));
+        console.log("doFinal结果: |hex  :" + bytesToHex(result));
+        console.log("doFinal结果: |base64  :" + bytesToBase64(result));
         return result;
     }
     cipher.doFinal.overload('[B').implementation = function (a) {
         //showStacks();
         var result = this.doFinal(a);
-        common.log("======================================");
-        common.log("doFinal参数: |str  :"     + bytesToString(a));
-        common.log("doFinal参数: |hex  :"     + bytesToHex(a));
-        common.log("doFinal结果: |str  :"     + bytesToString(result));
-        common.log("doFinal结果: |hex  :"     + bytesToHex(result));
-        common.log("doFinal结果: |base64  :"  + bytesToBase64(result));
+        console.log("======================================");
+        console.log("doFinal参数: |str  :" + bytesToString(a));
+        console.log("doFinal参数: |hex  :" + bytesToHex(a));
+        console.log("doFinal结果: |str  :" + bytesToString(result));
+        console.log("doFinal结果: |hex  :" + bytesToHex(result));
+        console.log("doFinal结果: |base64  :" + bytesToBase64(result));
         return result;
     }
 
@@ -535,8 +526,8 @@ Java.perform(function () {
     x509EncodedKeySpec.$init.overload('[B').implementation = function (a) {
         //showStacks();
         var result = this.$init(a);
-        common.log("======================================");
-        common.log("RSA密钥:" + bytesToBase64(a));
+        console.log("======================================");
+        console.log("RSA密钥:" + bytesToBase64(a));
         return result;
     }
 
@@ -544,38 +535,36 @@ Java.perform(function () {
     rSAPublicKeySpec.$init.overload('java.math.BigInteger', 'java.math.BigInteger').implementation = function (a, b) {
         //showStacks();
         var result = this.$init(a, b);
-        common.log("======================================");
-        //common.log("RSA密钥:" + bytesToBase64(a));
-        common.log("RSA密钥N:" + a.toString(16));
-        common.log("RSA密钥E:" + b.toString(16));
+        console.log("======================================");
+        //console.log("RSA密钥:" + bytesToBase64(a));
+        console.log("RSA密钥N:" + a.toString(16));
+        console.log("RSA密钥E:" + b.toString(16));
         return result;
     }
 
     var KeyPairGenerator = Java.use('java.security.KeyPairGenerator');
-    KeyPairGenerator.generateKeyPair.implementation = function () 
-    {
+    KeyPairGenerator.generateKeyPair.implementation = function () {
         //showStacks();
         var result = this.generateKeyPair();
-        common.log("======================================");
-        
+        console.log("======================================");
+
         var str_private = result.getPrivate().getEncoded();
         var str_public = result.getPublic().getEncoded();
-        common.log("公钥  |hex" + bytesToHex(str_public));
-        common.log("私钥  |hex" + bytesToHex(str_private));
+        console.log("公钥  |hex" + bytesToHex(str_public));
+        console.log("私钥  |hex" + bytesToHex(str_private));
 
         return result;
     }
 
-    KeyPairGenerator.genKeyPair.implementation = function () 
-    {
+    KeyPairGenerator.genKeyPair.implementation = function () {
         //showStacks();
         var result = this.genKeyPair();
-        common.log("======================================");
+        console.log("======================================");
 
         var str_private = result.getPrivate().getEncoded();
         var str_public = result.getPublic().getEncoded();
-        common.log("公钥  |hex" + bytesToHex(str_public));
-        common.log("私钥  |hex" + bytesToHex(str_private));
+        console.log("公钥  |hex" + bytesToHex(str_public));
+        console.log("私钥  |hex" + bytesToHex(str_private));
 
         return result;
     }
