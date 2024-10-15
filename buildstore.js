@@ -25,8 +25,8 @@ function generateStoreObject(filePath) {
     const author = authorMatch[1];
     const description = descriptionMatch[1];
     const ctime = ctimeMatch[1];
-    // 取10-999随机数
-    const down_count = Math.floor(Math.random() * 900) + 10;
+    // 取102-999随机数
+    const down_count = Math.floor(Math.random() * 898) + 102;
     const branch = "master";
     const store = {
         "author": author,
