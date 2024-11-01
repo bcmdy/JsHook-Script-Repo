@@ -1,6 +1,6 @@
 [
     {
-        "id": "29",
+        "id": "30",
         "title": "更新公告",
         "args": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/msg/msg.markdown",
         "action": "markdown"
