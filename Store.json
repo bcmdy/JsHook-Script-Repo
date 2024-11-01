@@ -10,7 +10,7 @@
 		"version": "1.0.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/B2B Extinction/Frida.js",
 		"desc": "添加钻石, 添加金币, 添加物品, 设置所有角色金币解锁",
-		"down_count": 380
+		"down_count": 954
 	},
 	{
 		"author": "hluwa",
@@ -23,7 +23,7 @@
 		"version": "1.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/FRIDA-DEXDump/Frida.js",
 		"desc": "Dex脱壳脚本1",
-		"down_count": 805
+		"down_count": 392
 	},
 	{
 		"author": "JSHook",
@@ -36,7 +36,7 @@
 		"version": "2.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/Frida通杀java层算法/Frida.js",
 		"desc": "Frida通杀java层算法",
-		"down_count": 751
+		"down_count": 464
 	},
 	{
 		"author": "墨殇",
@@ -49,7 +49,7 @@
 		"version": "3.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/GG大玩家Patch/Frida.js",
 		"desc": "GG大玩家目前已经跑路, 脚本解密公开，仅供学习交流使用",
-		"down_count": 868
+		"down_count": 560
 	},
 	{
 		"author": "墨殇收集整理",
@@ -62,7 +62,7 @@
 		"version": "1.2.38",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/SmileSoft-全屏翻译/Rhino.js",
 		"desc": "Rhino框架,启动配置建议延时10-20ms,随机请求ID,无限10次试用.具体作者不详,@墨殇搜集整理,不保证可用.",
-		"down_count": 592
+		"down_count": 228
 	},
 	{
 		"author": "墨殇",
@@ -75,7 +75,7 @@
 		"version": "3.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/Steam令牌提取/Frida.js",
 		"desc": "Steam令牌提取",
-		"down_count": 852
+		"down_count": 585
 	},
 	{
 		"author": "墨殇",
@@ -88,7 +88,7 @@
 		"version": "1.1",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/Unity Dump/Frida.js",
 		"desc": "Unity Dump 内存dump 获得基于Unity3d的游戏相关代码",
-		"down_count": 279
+		"down_count": 509
 	},
 	{
 		"author": "lasting-yang",
@@ -101,7 +101,7 @@
 		"version": "1.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/dump_dex/Frida.js",
 		"desc": "Dex脱壳脚本2",
-		"down_count": 453
+		"down_count": 507
 	},
 	{
 		"author": "墨殇",
@@ -114,7 +114,20 @@
 		"version": "1.2.1",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/mDNF韩服/Frida.js",
 		"desc": "更新过检测方法, 进图提示错误请无视, 有问题群里@我",
-		"down_count": 838
+		"down_count": 105
+	},
+	{
+		"author": "墨殇",
+		"markdown": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/丧尸派对/README.md",
+		"ctime": "2024/11/2 00:04:15",
+		"source": "https://github.com/bcmdy/JsHook-Script-Repo/tree/master/Scripts/丧尸派对",
+		"id": "丧尸派对",
+		"title": "丧尸派对",
+		"type": "Frida",
+		"version": "1.0.0",
+		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/丧尸派对/Frida.js",
+		"desc": "能量Max, 所有货币Max, 添加货币, 解锁所有僵尸, 升级所有僵尸, 解锁所有僵尸皮肤, 加速",
+		"down_count": 668
 	},
 	{
 		"author": "墨殇",
@@ -127,7 +140,7 @@
 		"version": "1.0.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/传说之旅/Frida.js",
 		"desc": "锁定HP, 锁定MP, 增加攻击力, 添加金币, 添加英雄碎片, 解锁所有技能, 升级所有技能, 添加所有宠物",
-		"down_count": 553
+		"down_count": 405
 	},
 	{
 		"author": "墨殇",
@@ -140,7 +153,7 @@
 		"version": "1.0.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/冒险者的rogue之旅/Frida.js",
 		"desc": "冒险者的rogue之旅 金币不减反增, 超级金币不减反增, 技能无CD, 技能无消耗",
-		"down_count": 413
+		"down_count": 470
 	},
 	{
 		"author": "墨殇",
@@ -153,7 +166,7 @@
 		"version": "1.0.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/冲鸭原始人/Frida.js",
 		"desc": "冲鸭原始人 解锁地图获得20亿货币、修改技能等级(调完去买下技能)、解锁角色/武器/技能始终成功(无视货币)",
-		"down_count": 500
+		"down_count": 750
 	},
 	{
 		"author": "墨殇",
@@ -166,7 +179,7 @@
 		"version": "1.0.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/勇士食堂/Frida.js",
 		"desc": "伤害,防御,血量,移速 加倍; 货币,材料不减反增; 钓鱼鱼饵始终200,钓鱼甩干免等待上鱼; 免广告获取奖励(可有可无), 无要求解锁(炼金,钓鱼,副本); 全礼包加成获取(非获取礼包) ",
-		"down_count": 539
+		"down_count": 149
 	},
 	{
 		"author": "墨殇",
@@ -179,7 +192,7 @@
 		"version": "1.0.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/土豆兄弟/Frida.js",
 		"desc": "土豆兄弟 解锁vip, 添加土豆, 伤害加倍, 被打回血, 经验翻倍, 解锁进度, 天赋卡满级",
-		"down_count": 806
+		"down_count": 187
 	},
 	{
 		"author": "jshookgroup@muort520",
@@ -192,7 +205,7 @@
 		"version": "2.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/快连随机id/Frida.js",
 		"desc": "快连随机id,切换线路,铂金会员.具体作者不详,@墨殇搜集整理,不保证可用.",
-		"down_count": 235
+		"down_count": 518
 	},
 	{
 		"author": "墨殇",
@@ -205,7 +218,7 @@
 		"version": "1.0.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/我在末日捡垃圾/Frida.js",
 		"desc": "我在末日捡垃圾 耗材始终足够, 开启所有天赋, 获取材料翻倍",
-		"down_count": 896
+		"down_count": 530
 	},
 	{
 		"author": "墨殇",
@@ -218,7 +231,7 @@
 		"version": "1.0.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/无限升级/Frida.js",
 		"desc": "无限升级 伤害翻倍、无敌、获取物品翻倍、经验翻倍、添加物品、无视封号进游戏",
-		"down_count": 834
+		"down_count": 991
 	},
 	{
 		"author": "墨殇",
@@ -231,7 +244,7 @@
 		"version": "1.0.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/无限氪金/Frida.js",
 		"desc": "无限氪金 经验翻倍、伤害翻倍、物品翻倍、物品无消耗、每日充值奖励无限领",
-		"down_count": 556
+		"down_count": 567
 	},
 	{
 		"author": "墨殇",
@@ -244,7 +257,7 @@
 		"version": "1.0.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/无限深渊/Frida.js",
 		"desc": "无限深渊 添加货币 添加券 角色满级",
-		"down_count": 587
+		"down_count": 586
 	},
 	{
 		"author": "墨殇",
@@ -257,7 +270,7 @@
 		"version": "5.0.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/番茄免费小说/Rhino.js",
 		"desc": "这是一个Frida脚本, HOOK番茄免费小说(com.dragon.read)会员。测试版本：6.3.9.32, 向下兼容版本：5.5.3.99, 其他版本请自行测试。",
-		"down_count": 942
+		"down_count": 142
 	},
 	{
 		"author": "墨殇",
@@ -270,7 +283,7 @@
 		"version": "1.0.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/石油大亨/Frida.js",
 		"desc": "解锁付费",
-		"down_count": 754
+		"down_count": 499
 	},
 	{
 		"author": "墨殇",
@@ -283,7 +296,7 @@
 		"version": "3.0.2",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/英雄生存IO/Frida.js",
 		"desc": "修复新版装备添加错误",
-		"down_count": 559
+		"down_count": 970
 	},
 	{
 		"author": "墨殇",
@@ -296,7 +309,7 @@
 		"version": "1.2",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/见习猎魔团/Frida.js",
 		"desc": "无敌秒杀",
-		"down_count": 699
+		"down_count": 827
 	},
 	{
 		"author": "墨殇",
@@ -309,7 +322,7 @@
 		"version": "1.2.3",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/迷城陆区/Frida.js",
 		"desc": "倍攻(可破坏地形, 不分敌我)、无敌(可配合倍攻使用)、一击必杀(仅对NPC起效)、解锁DLC、解锁角色、解锁皮肤、随机UID、阶段解锁(可存档)",
-		"down_count": 961
+		"down_count": 777
 	},
 	{
 		"author": "墨殇",
@@ -322,7 +335,7 @@
 		"version": "2.0.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/通神榜/Frida.js",
 		"desc": "上帝模式、货币增加、一键天赋、一键角色、一键宠物等",
-		"down_count": 315
+		"down_count": 150
 	},
 	{
 		"author": "墨殇",
@@ -335,6 +348,6 @@
 		"version": "1.0",
 		"url": "https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/音量键开关菜单/Frida.js",
 		"desc": "例子 音量键开关菜单",
-		"down_count": 817
+		"down_count": 148
 	}
 ]
