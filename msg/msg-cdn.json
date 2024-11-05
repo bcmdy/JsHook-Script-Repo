@@ -1,6 +1,6 @@
 [
     {
-        "id": "32",
+        "id": "33",
         "title": "更新公告CDN",
         "args": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/msg/msg.markdown",
         "action": "markdown"
