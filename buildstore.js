@@ -12,7 +12,7 @@ function generateStoreObject(filePath) {
     const versionMatch = content.match(/^# Version\s+(.*)$/m);
     const scriptTypeMatch = content.match(/^# 脚本类型\s+(.*)$/m);
     const authorMatch = content.match(/^# 作者\s+@(.*)$/m);
-    const descriptionMatch = content.match(/^# 描述\s+([\s\S]*?)$/m);
+    const descriptionMatch = content.match(/^# 描述\s+([\s\S]*?)# 作者/m);
     const ctimeMatch = content.match(/^# 更新时间\s+(.*)$/m);
 
     if (!nameMatch || !versionMatch || !scriptTypeMatch || !authorMatch || !descriptionMatch || !ctimeMatch) {
