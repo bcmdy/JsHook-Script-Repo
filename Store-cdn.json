@@ -10,7 +10,7 @@
 		"version": "1.0.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/B2B Extinction/Frida.js",
 		"desc": "添加钻石, 添加金币, 添加物品, 设置所有角色金币解锁\n\n游戏下载地址: Google商店\n",
-		"down_count": 683
+		"down_count": 959
 	},
 	{
 		"author": "hluwa",
@@ -23,7 +23,7 @@
 		"version": "1.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/FRIDA-DEXDump/Frida.js",
 		"desc": "Dex脱壳脚本1\nInitially Created By Hluwa\nhttps://github.com/hluwa/FRIDA-DEXDump\nModified By @ApkUnpacker to use as standalone js script \n(specifically for termux users)\n",
-		"down_count": 250
+		"down_count": 786
 	},
 	{
 		"author": "JSHook",
@@ -36,7 +36,7 @@
 		"version": "2.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/Frida通杀java层算法/Frida.js",
 		"desc": "Frida通杀java层算法\n由原JSHook仓库备份而来\n",
-		"down_count": 961
+		"down_count": 940
 	},
 	{
 		"author": "墨殇",
@@ -49,7 +49,7 @@
 		"version": "3.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/GG大玩家Patch/Frida.js",
 		"desc": "GG大玩家目前已经跑路, 脚本解密公开，仅供学习交流使用\n\nGG大玩家破解补丁\n\n- 免登陆\n- 免启动广告\n- MOD功能Patch\n- 插件签名Patch\n- 不支持免root\n\n支持版本\n\nGG大玩家_com.iplay.assistant_6.9.4646 (744)\n64位高性能游戏启动器_com.iplay.assistant.arm64_1.0.35 (35)\n\n注意:\n\n请给com.iplay.assistant与com.iplay.assistant.arm64同时启用脚本\n\n可能出现的问题:\n- 如启动大玩家出现闪退请多次尝试,或给主程序‘com.iplay.assistant’加入延迟\n- 如果大玩家内启动游戏出现闪退，提示签名错误，请检查LSP作用域是否选择64位高性能游戏启动器(com.iplay.assistant.arm64),并检查jshook内此应用是否启用本脚本，全部检查完毕后依旧闪退的请结束(终止)此应用后再试\n- 如果依旧闪退请提交Issues并附上详细问题描述及系统环境(如机型、系统版本、应用版本)或在电报群@墨 殇\n",
-		"down_count": 586
+		"down_count": 811
 	},
 	{
 		"author": "墨殇收集整理",
@@ -62,7 +62,7 @@
 		"version": "1.2.38",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/SmileSoft-全屏翻译/Rhino.js",
 		"desc": "Rhino框架,启动配置建议延时10-20ms,随机请求ID,无限10次试用.具体作者不详,@墨殇搜集整理,不保证可用.\n",
-		"down_count": 111
+		"down_count": 554
 	},
 	{
 		"author": "墨殇",
@@ -75,7 +75,7 @@
 		"version": "3.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/Steam令牌提取/Frida.js",
 		"desc": "Steam令牌提取\n\n提取Steam令牌 原始 SteamGuard-NNNNNNNNN 文件内容\n\nuuidKey依旧从文件:/data/user/0/com.valvesoftware.android.steam.community/shared_prefs/steam.uuid.xml 中明文提取\n\n用于第三方密钥令牌管理.\n\n如 WinAuth, Steam Desktop Auto, Watt Toolkit(原Steam++)\n# 更新:\nV3.0\n2024/6/29 13:26:54\n仓库更新 开源脚本\nV2.0\n2023/9/2 15:28:12\n提高运行效率并添加正则提取，直接打印出:\n{\"shared_secret\":\"xxxxxx\",\"identity_secret\":\"xxxxxxx\",\"secret_1\":\"xxxxxx\",\"serial_number\":\"xxxxxx\",\"revocation_code\":\"xxxxxx\",\"account_name\":\"xxxxxx\",\"token_gid\":\"xxxxxx\",\"steamguard_scheme\":x,\"steamid\":\"xxxxxx\"}\n令牌信息直接可用，无需手动修改\n",
-		"down_count": 992
+		"down_count": 610
 	},
 	{
 		"author": "墨殇",
@@ -88,7 +88,7 @@
 		"version": "2.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/Unity Dump/Frida.js",
 		"desc": "2025年2月4日 更新下版本号\nUnity Dump 内存dump 获得基于Unity3d的游戏相关代码\n",
-		"down_count": 622
+		"down_count": 612
 	},
 	{
 		"author": "lasting-yang",
@@ -101,7 +101,7 @@
 		"version": "1.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/dump_dex/Frida.js",
 		"desc": "Dex脱壳脚本2\ndump android dex\nref:https://github.com/lasting-yang/frida_dump/blob/master/dump_dex.js\n",
-		"down_count": 672
+		"down_count": 628
 	},
 	{
 		"author": "墨殇",
@@ -114,7 +114,7 @@
 		"version": "1.2.1",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/mDNF韩服/Frida.js",
 		"desc": "更新过检测方法, 进图提示错误请无视, 有问题群里@我\n\n请在角色选择界面使用Ptrace注入脚本, 或计算载入时间使用HOOK服务延迟注入脚本(目前测试延迟25-30秒左右到)\n\n请在脚本日志输出拦截成功2后再进入角色\n\n仅支持JsHook ≥ V1.2.5, 框架版本 ≥ V1.2.8_1208\n\n过检测仅支持韩服 com.nexon.mdnf v27.3.1\n\n记得关闭游戏的应用列表权限或者使用hma隐藏ROOT及XP应用\n\n",
-		"down_count": 898
+		"down_count": 666
 	},
 	{
 		"author": "墨殇",
@@ -127,7 +127,7 @@
 		"version": "1.0.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/丧尸派对/Frida.js",
 		"desc": "能量Max, 所有货币Max, 添加货币, 解锁所有僵尸, 升级所有僵尸, 解锁所有僵尸皮肤, 加速\n游戏下载地址: TapTap\n",
-		"down_count": 557
+		"down_count": 875
 	},
 	{
 		"author": "墨殇",
@@ -140,7 +140,7 @@
 		"version": "1.0.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/从零开始的勇者生活/Frida.js",
 		"desc": "满钻石\n游戏下载地址: TapTap\n",
-		"down_count": 747
+		"down_count": 622
 	},
 	{
 		"author": "墨殇",
@@ -153,7 +153,7 @@
 		"version": "1.0.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/传说之旅/Frida.js",
 		"desc": "锁定HP, 锁定MP, 增加攻击力, 添加金币, 添加英雄碎片, 解锁所有技能, 升级所有技能, 添加所有宠物\n\n游戏下载地址: TapTap\n",
-		"down_count": 495
+		"down_count": 260
 	},
 	{
 		"author": "墨殇",
@@ -166,7 +166,7 @@
 		"version": "1.0.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/冒险者的rogue之旅/Frida.js",
 		"desc": "冒险者的rogue之旅 金币不减反增, 超级金币不减反增, 技能无CD, 技能无消耗\n",
-		"down_count": 313
+		"down_count": 115
 	},
 	{
 		"author": "墨殇",
@@ -179,7 +179,7 @@
 		"version": "1.0.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/冲鸭原始人/Frida.js",
 		"desc": "冲鸭原始人 解锁地图获得20亿货币、修改技能等级(调完去买下技能)、解锁角色/武器/技能始终成功(无视货币)\n\n",
-		"down_count": 386
+		"down_count": 573
 	},
 	{
 		"author": "墨殇",
@@ -192,7 +192,7 @@
 		"version": "2.2.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/勇士食堂/Frida.js",
 		"desc": "伤害,防御,血量,移速 加倍; 货币,材料不减反增; 钓鱼鱼饵始终200,钓鱼甩干免等待上鱼; 免广告获取奖励, 无要求解锁(炼金,钓鱼,副本); 全礼包加成获取(非获取礼包) \n部分功能已阉割,感觉还能阉割点,不过就先这样吧\n\n2025-1-26   添加自动初始化，不用手动点击，修复taptap渠道检测闪退，之前好像没修好\n2025-1-13   更新过检测防闪退方式\n2025-1-4    新增适配taptap渠道，增加过taptap渠道检测，防闪退\n\n游戏下载地址: Google商店、taptap\n",
-		"down_count": 145
+		"down_count": 885
 	},
 	{
 		"author": "墨殇",
@@ -205,7 +205,7 @@
 		"version": "1.0.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/土豆兄弟/Frida.js",
 		"desc": "土豆兄弟 解锁vip, 添加土豆, 伤害加倍, 被打回血, 经验翻倍, 解锁进度, 天赋卡满级\n",
-		"down_count": 833
+		"down_count": 706
 	},
 	{
 		"author": "墨殇",
@@ -218,7 +218,7 @@
 		"version": "1.0.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/异世轮回录/Frida.js",
 		"desc": "异世轮回录 添加三种灵魂 锁定随机天赋\n游戏下载地址: TapTap\n",
-		"down_count": 227
+		"down_count": 849
 	},
 	{
 		"author": "jshookgroup@muort520",
@@ -231,7 +231,7 @@
 		"version": "2.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/快连随机id/Frida.js",
 		"desc": "快连随机id,切换线路,铂金会员.具体作者不详,@墨殇搜集整理,不保证可用.\n脚本新加了每60分钟重新生成新的ID\n",
-		"down_count": 452
+		"down_count": 322
 	},
 	{
 		"author": "墨殇",
@@ -244,7 +244,7 @@
 		"version": "1.0.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/我在末日捡垃圾/Frida.js",
 		"desc": "我在末日捡垃圾 耗材始终足够, 开启所有天赋, 获取材料翻倍\n",
-		"down_count": 986
+		"down_count": 814
 	},
 	{
 		"author": "XGeorgeSE 乔治",
@@ -257,7 +257,7 @@
 		"version": "2.1.6",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/我的勇者/Frida.js",
 		"desc": "我的勇者 一键扫荡各种密境，一键完成各种任务，一键领取奖励，另有各种属性、伤害、buff请自测\n",
-		"down_count": 850
+		"down_count": 454
 	},
 	{
 		"author": "墨殇",
@@ -270,7 +270,7 @@
 		"version": "1.0.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/无底洞/Frida.js",
 		"desc": "无怪物, 移动步数无限制, 添加灵石, 添加宝物\n游戏下载地址: TapTap\n",
-		"down_count": 762
+		"down_count": 486
 	},
 	{
 		"author": "墨殇",
@@ -283,7 +283,7 @@
 		"version": "2.0.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/无限升级/Frida.js",
 		"desc": "2025-1-12 更新 修复添加物品，无视封号已失效。\n已知问题：添加物品可能导致封号！\n无限升级 伤害翻倍、无敌、获取物品翻倍、经验翻倍、添加物品、无视封号进游戏\n想了想还是把复制装备删除了\n",
-		"down_count": 475
+		"down_count": 482
 	},
 	{
 		"author": "墨殇",
@@ -296,7 +296,7 @@
 		"version": "1.0.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/无限氪金/Frida.js",
 		"desc": "无限氪金 经验翻倍、伤害翻倍、物品翻倍、物品无消耗、每日充值奖励无限领\n",
-		"down_count": 255
+		"down_count": 619
 	},
 	{
 		"author": "墨殇",
@@ -309,7 +309,7 @@
 		"version": "1.0.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/无限深渊/Frida.js",
 		"desc": "无限深渊 添加货币 添加券 角色满级\n\n",
-		"down_count": 206
+		"down_count": 673
 	},
 	{
 		"author": "墨殇",
@@ -322,7 +322,7 @@
 		"version": "2.1.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/植物大战僵尸融合版/Frida.js",
 		"desc": "植物大战僵尸融合版\n游戏功能:\n自动增加阳光、自动添加金币、僵尸自杀、卡片无 CD、手套无 CD、锤子无 CD\n\n花园功能:\n花园植物修改、花园复制植物、花园植物成长满状态\n\n旅行功能:\n旅行选项无限刷新、解锁全部植物和buff\n\n植物种植:\n自动种植、清除全部植物\n\n2025年1月23日 18:33:11\n更新 添加锁定阳光、锁定金币、打印植物ID等\n\n2025年1月29日 10:26:11\n修复部分功能失效，添加手套拆分无限制\n\n游戏下载地址: https://www.bilibili.com/opus/1009171698031788066 来自 B 站 UP 主@飘飘 fly\n\n",
-		"down_count": 742
+		"down_count": 748
 	},
 	{
 		"author": "墨殇",
@@ -335,7 +335,7 @@
 		"version": "1.0.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/海岛时光-种田挖矿/Frida.js",
 		"desc": "添加金币, 添加所有物品, 装备/宠物品质等级调整\n游戏下载地址: TapTap\n",
-		"down_count": 836
+		"down_count": 832
 	},
 	{
 		"author": "墨殇",
@@ -348,7 +348,7 @@
 		"version": "5.0.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/番茄免费小说/Frida.js",
 		"desc": "这是一个Frida脚本, HOOK番茄免费小说(com.dragon.read)会员。测试版本：6.3.9.32, 向下兼容版本：5.5.3.99, 其他版本请自行测试。\n2024年9月1日进行重写，如果还有问题请电报@我\n",
-		"down_count": 958
+		"down_count": 995
 	},
 	{
 		"author": "墨殇",
@@ -361,7 +361,7 @@
 		"version": "1.0.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/石油大亨/Frida.js",
 		"desc": "解锁付费\n\n",
-		"down_count": 978
+		"down_count": 481
 	},
 	{
 		"author": "墨殇",
@@ -374,7 +374,7 @@
 		"version": "1.0.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/苍翼：混沌效应/Frida.js",
 		"desc": "无敌、反伤、倍攻、怪物即死\n游戏下载地址: taptap\n",
-		"down_count": 154
+		"down_count": 628
 	},
 	{
 		"author": "墨殇",
@@ -387,7 +387,7 @@
 		"version": "3.0.2",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/英雄生存IO/Frida.js",
 		"desc": "修复新版装备添加错误\n默认高级功能\n游戏加速、怪物加速、伤害加倍、无敌\n添加各种游戏物品\n基本已经全部都有了\n游戏下载地址: https://play.google.com/store/apps/details?id=com.game.hero.survival.war\n",
-		"down_count": 835
+		"down_count": 110
 	},
 	{
 		"author": "墨殇",
@@ -400,7 +400,7 @@
 		"version": "1.2",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/见习猎魔团/Frida.js",
 		"desc": "无敌秒杀\n",
-		"down_count": 644
+		"down_count": 781
 	},
 	{
 		"author": "墨殇",
@@ -413,7 +413,7 @@
 		"version": "1.2.3",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/迷城陆区/Frida.js",
 		"desc": "倍攻(可破坏地形, 不分敌我)、无敌(可配合倍攻使用)、一击必杀(仅对NPC起效)、解锁DLC、解锁角色、解锁皮肤、随机UID、阶段解锁(可存档)\n\n注: 倍攻可以破坏地形, 但不能判断敌我, 简单说就是怪物也能秒杀你\n\n目前貌似只有好游快爆可以下载\n\n2024年7月17日 11:18:43更新修复无敌，添加0元购\n",
-		"down_count": 955
+		"down_count": 733
 	},
 	{
 		"author": "墨殇",
@@ -426,7 +426,7 @@
 		"version": "2.0.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/通神榜/Frida.js",
 		"desc": "上帝模式、货币增加、一键天赋、一键角色、一键宠物等\n\n2024/10/15 15:39:58 更新一键天赋功能,现在一键天赋可以存档\n",
-		"down_count": 203
+		"down_count": 616
 	},
 	{
 		"author": "墨殇",
@@ -439,6 +439,6 @@
 		"version": "1.0",
 		"url": "https://gh-proxy.com/https://raw.githubusercontent.com/bcmdy/JsHook-Script-Repo/master/Scripts/音量键开关菜单/Frida.js",
 		"desc": "例子 音量键开关菜单\n",
-		"down_count": 846
+		"down_count": 931
 	}
 ]
